@@ -3,18 +3,98 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C101639325B0950F0079EB69 /* SelectingVerseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C101638E25B0950F0079EB69 /* SelectingVerseRouter.swift */; };
+		C101639425B0950F0079EB69 /* SelectingVerseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C101638F25B0950F0079EB69 /* SelectingVerseViewController.swift */; };
+		C101639525B0950F0079EB69 /* SelectingVerseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C101639025B0950F0079EB69 /* SelectingVerseBuilder.swift */; };
+		C101639625B0950F0079EB69 /* SelectingVerseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C101639125B0950F0079EB69 /* SelectingVerseInteractor.swift */; };
+		C101639725B0950F0079EB69 /* SelectingVerseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C101639225B0950F0079EB69 /* SelectingVerseViewController.xib */; };
+		C1103ABA25BDA111002AEABA /* UITabBarController + Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1103AB925BDA111002AEABA /* UITabBarController + Ex.swift */; };
+		C1103ABF25BE60AA002AEABA /* SchedulesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1103ABE25BE60AA002AEABA /* SchedulesManager.swift */; };
+		C12B916425B0340800DD6FB1 /* SettingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12B915F25B0340800DD6FB1 /* SettingRouter.swift */; };
+		C12B916525B0340800DD6FB1 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12B916025B0340800DD6FB1 /* SettingViewController.storyboard */; };
+		C12B916625B0340800DD6FB1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12B916125B0340800DD6FB1 /* SettingViewController.swift */; };
+		C12B916725B0340800DD6FB1 /* SettingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12B916225B0340800DD6FB1 /* SettingBuilder.swift */; };
+		C12B916825B0340800DD6FB1 /* SettingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12B916325B0340800DD6FB1 /* SettingInteractor.swift */; };
+		C12B917225B03DE400DD6FB1 /* BibleVerseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12B917025B03DE400DD6FB1 /* BibleVerseCell.swift */; };
+		C12B917325B03DE400DD6FB1 /* BibleVerseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C12B917125B03DE400DD6FB1 /* BibleVerseCell.xib */; };
+		C12B917925B04A1300DD6FB1 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = C12B917825B04A1300DD6FB1 /* Then */; };
+		C1682BA625AF316F00E8564A /* CalendarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1682BA125AF316F00E8564A /* CalendarRouter.swift */; };
+		C1682BA725AF316F00E8564A /* CalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1682BA225AF316F00E8564A /* CalendarViewController.storyboard */; };
+		C1682BA825AF316F00E8564A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1682BA325AF316F00E8564A /* CalendarViewController.swift */; };
+		C1682BA925AF316F00E8564A /* CalendarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1682BA425AF316F00E8564A /* CalendarBuilder.swift */; };
+		C1682BAA25AF316F00E8564A /* CalendarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1682BA525AF316F00E8564A /* CalendarInteractor.swift */; };
+		C1682BB025AF368C00E8564A /* ChildViewControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1682BAF25AF368C00E8564A /* ChildViewControllable.swift */; };
+		C1682BBA25AF379800E8564A /* MonthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1682BB525AF379800E8564A /* MonthRouter.swift */; };
+		C1682BBB25AF379800E8564A /* MonthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1682BB625AF379800E8564A /* MonthViewController.swift */; };
+		C1682BBC25AF379800E8564A /* MonthBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1682BB725AF379800E8564A /* MonthBuilder.swift */; };
+		C1682BBD25AF379800E8564A /* MonthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1682BB825AF379800E8564A /* MonthInteractor.swift */; };
+		C1682BC725AFDACD00E8564A /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = C1682BC625AFDACD00E8564A /* FSCalendar */; };
+		C1682BCF25AFDCEA00E8564A /* MonthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1682BCE25AFDCEA00E8564A /* MonthViewController.storyboard */; };
+		C1682BD825AFE4EC00E8564A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C1682BD725AFE4EC00E8564A /* SnapKit */; };
 		C168CEF625AC85C9008C1AFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CEF525AC85C9008C1AFE /* AppDelegate.swift */; };
 		C168CEF825AC85C9008C1AFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CEF725AC85C9008C1AFE /* SceneDelegate.swift */; };
-		C168CEFA25AC85C9008C1AFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CEF925AC85C9008C1AFE /* ViewController.swift */; };
-		C168CEFD25AC85C9008C1AFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C168CEFB25AC85C9008C1AFE /* Main.storyboard */; };
 		C168CEFF25AC85CC008C1AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C168CEFE25AC85CC008C1AFE /* Assets.xcassets */; };
 		C168CF0225AC85CC008C1AFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C168CF0025AC85CC008C1AFE /* LaunchScreen.storyboard */; };
 		C168CF0D25AC85CC008C1AFE /* Arise_ShineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CF0C25AC85CC008C1AFE /* Arise_ShineTests.swift */; };
 		C168CF1825AC85CC008C1AFE /* Arise_ShineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CF1725AC85CC008C1AFE /* Arise_ShineUITests.swift */; };
+		C168CF2A25AC8667008C1AFE /* RIBs in Frameworks */ = {isa = PBXBuildFile; productRef = C168CF2925AC8667008C1AFE /* RIBs */; };
+		C168CF3025AC8722008C1AFE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C168CF2F25AC8722008C1AFE /* RxSwift */; };
+		C168CF3225AC8722008C1AFE /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C168CF3125AC8722008C1AFE /* RxCocoa */; };
+		C168CF3825AC8745008C1AFE /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = C168CF3725AC8745008C1AFE /* ReactorKit */; };
+		C168CF4925AC8834008C1AFE /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CF4525AC8834008C1AFE /* RootRouter.swift */; };
+		C168CF4A25AC8834008C1AFE /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CF4625AC8834008C1AFE /* RootViewController.swift */; };
+		C168CF4B25AC8834008C1AFE /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CF4725AC8834008C1AFE /* RootBuilder.swift */; };
+		C168CF4C25AC8834008C1AFE /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CF4825AC8834008C1AFE /* RootInteractor.swift */; };
+		C1BE039925C07F4600D028E7 /* UserDefaults + Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BE039825C07F4600D028E7 /* UserDefaults + Ex.swift */; };
+		C1BE03A825C0976800D028E7 /* Toaster in Frameworks */ = {isa = PBXBuildFile; productRef = C1BE03A725C0976800D028E7 /* Toaster */; };
+		C1D02C1125AC89E20001CF6C /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02C1025AC89E20001CF6C /* AppComponent.swift */; };
+		C1D02C1A25AC8DAA0001CF6C /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02C1625AC8DAA0001CF6C /* MainTabBarRouter.swift */; };
+		C1D02C1B25AC8DAA0001CF6C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02C1725AC8DAA0001CF6C /* MainTabBarViewController.swift */; };
+		C1D02C1C25AC8DAA0001CF6C /* MainTabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02C1825AC8DAA0001CF6C /* MainTabBarBuilder.swift */; };
+		C1D02C1D25AC8DAA0001CF6C /* MainTabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02C1925AC8DAA0001CF6C /* MainTabBarInteractor.swift */; };
+		C1D02C2A25AC939A0001CF6C /* BibleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02C2525AC939A0001CF6C /* BibleRouter.swift */; };
+		C1D02C2B25AC939A0001CF6C /* BibleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1D02C2625AC939A0001CF6C /* BibleViewController.storyboard */; };
+		C1D02C2C25AC939A0001CF6C /* BibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02C2725AC939A0001CF6C /* BibleViewController.swift */; };
+		C1D02C2D25AC939A0001CF6C /* BibleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02C2825AC939A0001CF6C /* BibleBuilder.swift */; };
+		C1D02C2E25AC939A0001CF6C /* BibleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02C2925AC939A0001CF6C /* BibleInteractor.swift */; };
+		C1D02C3425AC94EC0001CF6C /* UINavigation + Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02C3325AC94EC0001CF6C /* UINavigation + Ex.swift */; };
+		C1D02C3A25AC99ED0001CF6C /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = C1D02C3925AC99ED0001CF6C /* SQLite */; };
+		C1D02C4025ADBB810001CF6C /* RxAppState in Frameworks */ = {isa = PBXBuildFile; productRef = C1D02C3F25ADBB810001CF6C /* RxAppState */; };
+		C1D02C7325AE05AF0001CF6C /* Kor.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D02C5225ADFA270001CF6C /* Kor.sqlite3 */; };
+		C1D02C8825AE74BF0001CF6C /* UIViewController + Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02C8725AE74BF0001CF6C /* UIViewController + Ex.swift */; };
+		C1D02C8D25AE74F20001CF6C /* NSObject + Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02C8C25AE74F20001CF6C /* NSObject + Ex.swift */; };
+		C1D02CA525AE83120001CF6C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02CA425AE83120001CF6C /* BaseViewController.swift */; };
+		C1D02CAF25AE89A40001CF6C /* SelectRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02CAA25AE89A40001CF6C /* SelectRouter.swift */; };
+		C1D02CB025AE89A40001CF6C /* SelectViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1D02CAB25AE89A40001CF6C /* SelectViewController.storyboard */; };
+		C1D02CB125AE89A40001CF6C /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02CAC25AE89A40001CF6C /* SelectViewController.swift */; };
+		C1D02CB225AE89A40001CF6C /* SelectBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02CAD25AE89A40001CF6C /* SelectBuilder.swift */; };
+		C1D02CB325AE89A40001CF6C /* SelectInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02CAE25AE89A40001CF6C /* SelectInteractor.swift */; };
+		C1D02CBA25AE961F0001CF6C /* BiblePresentableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02CB925AE961F0001CF6C /* BiblePresentableState.swift */; };
+		C1D02CC825AE97AF0001CF6C /* BibleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02CC725AE97AF0001CF6C /* BibleManager.swift */; };
+		C1D02CD025AEC1770001CF6C /* BibleChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02CCF25AEC1770001CF6C /* BibleChapter.swift */; };
+		C1DDA3F825B1D74500FCFDD3 /* SelectBibleReadingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDA3F325B1D74500FCFDD3 /* SelectBibleReadingRouter.swift */; };
+		C1DDA3F925B1D74500FCFDD3 /* SelectBibleReadingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DDA3F425B1D74500FCFDD3 /* SelectBibleReadingViewController.storyboard */; };
+		C1DDA3FA25B1D74500FCFDD3 /* SelectBibleReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDA3F525B1D74500FCFDD3 /* SelectBibleReadingViewController.swift */; };
+		C1DDA3FB25B1D74500FCFDD3 /* SelectBibleReadingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDA3F625B1D74500FCFDD3 /* SelectBibleReadingBuilder.swift */; };
+		C1DDA3FC25B1D74500FCFDD3 /* SelectBibleReadingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDA3F725B1D74500FCFDD3 /* SelectBibleReadingInteractor.swift */; };
+		C1DDA40725B295A400FCFDD3 /* BibleReadingSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDA40625B295A400FCFDD3 /* BibleReadingSchedule.swift */; };
+		C1DFDD7125BB2368004CD1E3 /* DayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFDD6C25BB2368004CD1E3 /* DayRouter.swift */; };
+		C1DFDD7225BB2368004CD1E3 /* DayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DFDD6D25BB2368004CD1E3 /* DayViewController.storyboard */; };
+		C1DFDD7325BB2368004CD1E3 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFDD6E25BB2368004CD1E3 /* DayViewController.swift */; };
+		C1DFDD7425BB2368004CD1E3 /* DayBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFDD6F25BB2368004CD1E3 /* DayBuilder.swift */; };
+		C1DFDD7525BB2368004CD1E3 /* DayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFDD7025BB2368004CD1E3 /* DayInteractor.swift */; };
+		C1E7CB0425B5961200E14AB7 /* BibleReadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E7CB0225B5961200E14AB7 /* BibleReadingCell.swift */; };
+		C1E7CB0525B5961200E14AB7 /* BibleReadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E7CB0325B5961200E14AB7 /* BibleReadingCell.xib */; };
+		C1FB96AB25BFAC4F00D470A9 /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = C1FB96AA25BFAC4F00D470A9 /* PanModal */; };
+		C1FB96B525BFACAE00D470A9 /* BibleFontRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FB96B025BFACAE00D470A9 /* BibleFontRouter.swift */; };
+		C1FB96B625BFACAF00D470A9 /* BibleFontViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FB96B125BFACAE00D470A9 /* BibleFontViewController.storyboard */; };
+		C1FB96B725BFACAF00D470A9 /* BibleFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FB96B225BFACAE00D470A9 /* BibleFontViewController.swift */; };
+		C1FB96B825BFACAF00D470A9 /* BibleFontBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FB96B325BFACAE00D470A9 /* BibleFontBuilder.swift */; };
+		C1FB96B925BFACAF00D470A9 /* BibleFontInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FB96B425BFACAE00D470A9 /* BibleFontInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +115,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C101638E25B0950F0079EB69 /* SelectingVerseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingVerseRouter.swift; sourceTree = "<group>"; };
+		C101638F25B0950F0079EB69 /* SelectingVerseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingVerseViewController.swift; sourceTree = "<group>"; };
+		C101639025B0950F0079EB69 /* SelectingVerseBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingVerseBuilder.swift; sourceTree = "<group>"; };
+		C101639125B0950F0079EB69 /* SelectingVerseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingVerseInteractor.swift; sourceTree = "<group>"; };
+		C101639225B0950F0079EB69 /* SelectingVerseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectingVerseViewController.xib; sourceTree = "<group>"; };
+		C1103AB925BDA111002AEABA /* UITabBarController + Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController + Ex.swift"; sourceTree = "<group>"; };
+		C1103ABE25BE60AA002AEABA /* SchedulesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesManager.swift; sourceTree = "<group>"; };
+		C12B915F25B0340800DD6FB1 /* SettingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRouter.swift; sourceTree = "<group>"; };
+		C12B916025B0340800DD6FB1 /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
+		C12B916125B0340800DD6FB1 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		C12B916225B0340800DD6FB1 /* SettingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBuilder.swift; sourceTree = "<group>"; };
+		C12B916325B0340800DD6FB1 /* SettingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInteractor.swift; sourceTree = "<group>"; };
+		C12B917025B03DE400DD6FB1 /* BibleVerseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleVerseCell.swift; sourceTree = "<group>"; };
+		C12B917125B03DE400DD6FB1 /* BibleVerseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BibleVerseCell.xib; sourceTree = "<group>"; };
+		C1682BA125AF316F00E8564A /* CalendarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarRouter.swift; sourceTree = "<group>"; };
+		C1682BA225AF316F00E8564A /* CalendarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarViewController.storyboard; sourceTree = "<group>"; };
+		C1682BA325AF316F00E8564A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		C1682BA425AF316F00E8564A /* CalendarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarBuilder.swift; sourceTree = "<group>"; };
+		C1682BA525AF316F00E8564A /* CalendarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarInteractor.swift; sourceTree = "<group>"; };
+		C1682BAF25AF368C00E8564A /* ChildViewControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewControllable.swift; sourceTree = "<group>"; };
+		C1682BB525AF379800E8564A /* MonthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthRouter.swift; sourceTree = "<group>"; };
+		C1682BB625AF379800E8564A /* MonthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthViewController.swift; sourceTree = "<group>"; };
+		C1682BB725AF379800E8564A /* MonthBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthBuilder.swift; sourceTree = "<group>"; };
+		C1682BB825AF379800E8564A /* MonthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthInteractor.swift; sourceTree = "<group>"; };
+		C1682BCE25AFDCEA00E8564A /* MonthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MonthViewController.storyboard; sourceTree = "<group>"; };
 		C168CEF225AC85C9008C1AFE /* Arise&Shine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arise&Shine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C168CEF525AC85C9008C1AFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C168CEF725AC85C9008C1AFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C168CEF925AC85C9008C1AFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C168CEFC25AC85C9008C1AFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C168CEFE25AC85CC008C1AFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C168CF0125AC85CC008C1AFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C168CF0325AC85CC008C1AFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +152,52 @@
 		C168CF1325AC85CC008C1AFE /* Arise&ShineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Arise&ShineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C168CF1725AC85CC008C1AFE /* Arise_ShineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arise_ShineUITests.swift; sourceTree = "<group>"; };
 		C168CF1925AC85CC008C1AFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C168CF4525AC8834008C1AFE /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		C168CF4625AC8834008C1AFE /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		C168CF4725AC8834008C1AFE /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		C168CF4825AC8834008C1AFE /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		C1BE039825C07F4600D028E7 /* UserDefaults + Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + Ex.swift"; sourceTree = "<group>"; };
+		C1D02C1025AC89E20001CF6C /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		C1D02C1625AC8DAA0001CF6C /* MainTabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarRouter.swift; sourceTree = "<group>"; };
+		C1D02C1725AC8DAA0001CF6C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		C1D02C1825AC8DAA0001CF6C /* MainTabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarBuilder.swift; sourceTree = "<group>"; };
+		C1D02C1925AC8DAA0001CF6C /* MainTabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarInteractor.swift; sourceTree = "<group>"; };
+		C1D02C2525AC939A0001CF6C /* BibleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleRouter.swift; sourceTree = "<group>"; };
+		C1D02C2625AC939A0001CF6C /* BibleViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BibleViewController.storyboard; sourceTree = "<group>"; };
+		C1D02C2725AC939A0001CF6C /* BibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleViewController.swift; sourceTree = "<group>"; };
+		C1D02C2825AC939A0001CF6C /* BibleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleBuilder.swift; sourceTree = "<group>"; };
+		C1D02C2925AC939A0001CF6C /* BibleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleInteractor.swift; sourceTree = "<group>"; };
+		C1D02C3325AC94EC0001CF6C /* UINavigation + Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigation + Ex.swift"; sourceTree = "<group>"; };
+		C1D02C5225ADFA270001CF6C /* Kor.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kor.sqlite3; sourceTree = "<group>"; };
+		C1D02C8725AE74BF0001CF6C /* UIViewController + Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ex.swift"; sourceTree = "<group>"; };
+		C1D02C8C25AE74F20001CF6C /* NSObject + Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + Ex.swift"; sourceTree = "<group>"; };
+		C1D02CA425AE83120001CF6C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C1D02CAA25AE89A40001CF6C /* SelectRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRouter.swift; sourceTree = "<group>"; };
+		C1D02CAB25AE89A40001CF6C /* SelectViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectViewController.storyboard; sourceTree = "<group>"; };
+		C1D02CAC25AE89A40001CF6C /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
+		C1D02CAD25AE89A40001CF6C /* SelectBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBuilder.swift; sourceTree = "<group>"; };
+		C1D02CAE25AE89A40001CF6C /* SelectInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectInteractor.swift; sourceTree = "<group>"; };
+		C1D02CB925AE961F0001CF6C /* BiblePresentableState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiblePresentableState.swift; sourceTree = "<group>"; };
+		C1D02CC725AE97AF0001CF6C /* BibleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleManager.swift; sourceTree = "<group>"; };
+		C1D02CCF25AEC1770001CF6C /* BibleChapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleChapter.swift; sourceTree = "<group>"; };
+		C1DDA3F325B1D74500FCFDD3 /* SelectBibleReadingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBibleReadingRouter.swift; sourceTree = "<group>"; };
+		C1DDA3F425B1D74500FCFDD3 /* SelectBibleReadingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectBibleReadingViewController.storyboard; sourceTree = "<group>"; };
+		C1DDA3F525B1D74500FCFDD3 /* SelectBibleReadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBibleReadingViewController.swift; sourceTree = "<group>"; };
+		C1DDA3F625B1D74500FCFDD3 /* SelectBibleReadingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBibleReadingBuilder.swift; sourceTree = "<group>"; };
+		C1DDA3F725B1D74500FCFDD3 /* SelectBibleReadingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBibleReadingInteractor.swift; sourceTree = "<group>"; };
+		C1DDA40625B295A400FCFDD3 /* BibleReadingSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleReadingSchedule.swift; sourceTree = "<group>"; };
+		C1DFDD6C25BB2368004CD1E3 /* DayRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRouter.swift; sourceTree = "<group>"; };
+		C1DFDD6D25BB2368004CD1E3 /* DayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DayViewController.storyboard; sourceTree = "<group>"; };
+		C1DFDD6E25BB2368004CD1E3 /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
+		C1DFDD6F25BB2368004CD1E3 /* DayBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayBuilder.swift; sourceTree = "<group>"; };
+		C1DFDD7025BB2368004CD1E3 /* DayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInteractor.swift; sourceTree = "<group>"; };
+		C1E7CB0225B5961200E14AB7 /* BibleReadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleReadingCell.swift; sourceTree = "<group>"; };
+		C1E7CB0325B5961200E14AB7 /* BibleReadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BibleReadingCell.xib; sourceTree = "<group>"; };
+		C1FB96B025BFACAE00D470A9 /* BibleFontRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleFontRouter.swift; sourceTree = "<group>"; };
+		C1FB96B125BFACAE00D470A9 /* BibleFontViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BibleFontViewController.storyboard; sourceTree = "<group>"; };
+		C1FB96B225BFACAE00D470A9 /* BibleFontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleFontViewController.swift; sourceTree = "<group>"; };
+		C1FB96B325BFACAE00D470A9 /* BibleFontBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleFontBuilder.swift; sourceTree = "<group>"; };
+		C1FB96B425BFACAE00D470A9 /* BibleFontInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleFontInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +205,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1D02C3A25AC99ED0001CF6C /* SQLite in Frameworks */,
+				C12B917925B04A1300DD6FB1 /* Then in Frameworks */,
+				C1BE03A825C0976800D028E7 /* Toaster in Frameworks */,
+				C1682BD825AFE4EC00E8564A /* SnapKit in Frameworks */,
+				C168CF3225AC8722008C1AFE /* RxCocoa in Frameworks */,
+				C1FB96AB25BFAC4F00D470A9 /* PanModal in Frameworks */,
+				C1D02C4025ADBB810001CF6C /* RxAppState in Frameworks */,
+				C168CF3025AC8722008C1AFE /* RxSwift in Frameworks */,
+				C168CF3825AC8745008C1AFE /* ReactorKit in Frameworks */,
+				C1682BC725AFDACD00E8564A /* FSCalendar in Frameworks */,
+				C168CF2A25AC8667008C1AFE /* RIBs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +236,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C101638D25B094E20079EB69 /* SelectingVerse */ = {
+			isa = PBXGroup;
+			children = (
+				C101638E25B0950F0079EB69 /* SelectingVerseRouter.swift */,
+				C101639025B0950F0079EB69 /* SelectingVerseBuilder.swift */,
+				C101639125B0950F0079EB69 /* SelectingVerseInteractor.swift */,
+				C101638F25B0950F0079EB69 /* SelectingVerseViewController.swift */,
+				C101639225B0950F0079EB69 /* SelectingVerseViewController.xib */,
+			);
+			path = SelectingVerse;
+			sourceTree = "<group>";
+		};
+		C12B915E25B0339700DD6FB1 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				C12B915F25B0340800DD6FB1 /* SettingRouter.swift */,
+				C12B916225B0340800DD6FB1 /* SettingBuilder.swift */,
+				C12B916325B0340800DD6FB1 /* SettingInteractor.swift */,
+				C12B916125B0340800DD6FB1 /* SettingViewController.swift */,
+				C12B916025B0340800DD6FB1 /* SettingViewController.storyboard */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		C12B916F25B03DBB00DD6FB1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C12B917025B03DE400DD6FB1 /* BibleVerseCell.swift */,
+				C12B917125B03DE400DD6FB1 /* BibleVerseCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C1682BA025AF2F5000E8564A /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				C1682BA125AF316F00E8564A /* CalendarRouter.swift */,
+				C1682BA425AF316F00E8564A /* CalendarBuilder.swift */,
+				C1682BA525AF316F00E8564A /* CalendarInteractor.swift */,
+				C1682BA325AF316F00E8564A /* CalendarViewController.swift */,
+				C1682BA225AF316F00E8564A /* CalendarViewController.storyboard */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		C1682BAE25AF367200E8564A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C1682BAF25AF368C00E8564A /* ChildViewControllable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C1682BB425AF36FE00E8564A /* Month */ = {
+			isa = PBXGroup;
+			children = (
+				C1682BB525AF379800E8564A /* MonthRouter.swift */,
+				C1682BB725AF379800E8564A /* MonthBuilder.swift */,
+				C1682BB825AF379800E8564A /* MonthInteractor.swift */,
+				C1682BB625AF379800E8564A /* MonthViewController.swift */,
+				C1682BCE25AFDCEA00E8564A /* MonthViewController.storyboard */,
+			);
+			path = Month;
+			sourceTree = "<group>";
+		};
 		C168CEE925AC85C9008C1AFE = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +324,8 @@
 		C168CEF425AC85C9008C1AFE /* Arise&Shine */ = {
 			isa = PBXGroup;
 			children = (
-				C168CEF525AC85C9008C1AFE /* AppDelegate.swift */,
-				C168CEF725AC85C9008C1AFE /* SceneDelegate.swift */,
-				C168CEF925AC85C9008C1AFE /* ViewController.swift */,
-				C168CEFB25AC85C9008C1AFE /* Main.storyboard */,
-				C168CEFE25AC85CC008C1AFE /* Assets.xcassets */,
-				C168CF0025AC85CC008C1AFE /* LaunchScreen.storyboard */,
-				C168CF0325AC85CC008C1AFE /* Info.plist */,
+				C1D02C9225AE77220001CF6C /* Scource */,
+				C1D02C4425ADBFDD0001CF6C /* Resource */,
 			);
 			path = "Arise&Shine";
 			sourceTree = "<group>";
@@ -128,6 +348,239 @@
 			path = "Arise&ShineUITests";
 			sourceTree = "<group>";
 		};
+		C168CF3C25AC8769008C1AFE /* AppStart */ = {
+			isa = PBXGroup;
+			children = (
+				C168CEF525AC85C9008C1AFE /* AppDelegate.swift */,
+				C168CEF725AC85C9008C1AFE /* SceneDelegate.swift */,
+				C1D02C1025AC89E20001CF6C /* AppComponent.swift */,
+			);
+			path = AppStart;
+			sourceTree = "<group>";
+		};
+		C168CF4325AC8816008C1AFE /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C1682BAE25AF367200E8564A /* Protocols */,
+				C1D02CA325AE83070001CF6C /* BaseComponents */,
+				C1D02C9125AE76F20001CF6C /* Scene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C168CF4425AC8827008C1AFE /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				C168CF4525AC8834008C1AFE /* RootRouter.swift */,
+				C168CF4725AC8834008C1AFE /* RootBuilder.swift */,
+				C168CF4825AC8834008C1AFE /* RootInteractor.swift */,
+				C168CF4625AC8834008C1AFE /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		C1D02C1525AC8CF70001CF6C /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C1D02C1625AC8DAA0001CF6C /* MainTabBarRouter.swift */,
+				C1D02C1825AC8DAA0001CF6C /* MainTabBarBuilder.swift */,
+				C1D02C1925AC8DAA0001CF6C /* MainTabBarInteractor.swift */,
+				C1D02C1725AC8DAA0001CF6C /* MainTabBarViewController.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		C1D02C2425AC937D0001CF6C /* Bible */ = {
+			isa = PBXGroup;
+			children = (
+				C12B916F25B03DBB00DD6FB1 /* Components */,
+				C1D02C2525AC939A0001CF6C /* BibleRouter.swift */,
+				C1D02C2825AC939A0001CF6C /* BibleBuilder.swift */,
+				C1D02C2925AC939A0001CF6C /* BibleInteractor.swift */,
+				C1D02C2725AC939A0001CF6C /* BibleViewController.swift */,
+				C1D02C2625AC939A0001CF6C /* BibleViewController.storyboard */,
+			);
+			path = Bible;
+			sourceTree = "<group>";
+		};
+		C1D02C3225AC94C90001CF6C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C1D02C3325AC94EC0001CF6C /* UINavigation + Ex.swift */,
+				C1D02C8725AE74BF0001CF6C /* UIViewController + Ex.swift */,
+				C1D02C8C25AE74F20001CF6C /* NSObject + Ex.swift */,
+				C1103AB925BDA111002AEABA /* UITabBarController + Ex.swift */,
+				C1BE039825C07F4600D028E7 /* UserDefaults + Ex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C1D02C4425ADBFDD0001CF6C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C1D02C9625AE77440001CF6C /* Supporting Files */,
+				C1D02C5225ADFA270001CF6C /* Kor.sqlite3 */,
+				C168CEFE25AC85CC008C1AFE /* Assets.xcassets */,
+				C168CF0025AC85CC008C1AFE /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		C1D02C9125AE76F20001CF6C /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				C168CF4425AC8827008C1AFE /* Root */,
+				C1D02C1525AC8CF70001CF6C /* MainTabBar */,
+				C1D02C2425AC937D0001CF6C /* Bible */,
+				C1FB96AF25BFAC9700D470A9 /* BibleFont */,
+				C1D02CA925AE88430001CF6C /* Select */,
+				C101638D25B094E20079EB69 /* SelectingVerse */,
+				C1682BA025AF2F5000E8564A /* Calendar */,
+				C1682BB425AF36FE00E8564A /* Month */,
+				C1DFDD6B25BB231E004CD1E3 /* Day */,
+				C12B915E25B0339700DD6FB1 /* Setting */,
+				C1DDA3F225B1D70C00FCFDD3 /* SelectBibleReading */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		C1D02C9225AE77220001CF6C /* Scource */ = {
+			isa = PBXGroup;
+			children = (
+				C1D02CBE25AE96340001CF6C /* Platform */,
+				C1D02CB825AE96000001CF6C /* Domain */,
+				C1D02C3225AC94C90001CF6C /* Extensions */,
+				C168CF3C25AC8769008C1AFE /* AppStart */,
+				C168CF4325AC8816008C1AFE /* Presentation */,
+			);
+			path = Scource;
+			sourceTree = "<group>";
+		};
+		C1D02C9625AE77440001CF6C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C168CF0325AC85CC008C1AFE /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C1D02CA325AE83070001CF6C /* BaseComponents */ = {
+			isa = PBXGroup;
+			children = (
+				C1D02CA425AE83120001CF6C /* BaseViewController.swift */,
+			);
+			path = BaseComponents;
+			sourceTree = "<group>";
+		};
+		C1D02CA925AE88430001CF6C /* Select */ = {
+			isa = PBXGroup;
+			children = (
+				C1D02CAA25AE89A40001CF6C /* SelectRouter.swift */,
+				C1D02CAD25AE89A40001CF6C /* SelectBuilder.swift */,
+				C1D02CAE25AE89A40001CF6C /* SelectInteractor.swift */,
+				C1D02CAC25AE89A40001CF6C /* SelectViewController.swift */,
+				C1D02CAB25AE89A40001CF6C /* SelectViewController.storyboard */,
+			);
+			path = Select;
+			sourceTree = "<group>";
+		};
+		C1D02CB725AE95B30001CF6C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C1D02CB925AE961F0001CF6C /* BiblePresentableState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C1D02CB825AE96000001CF6C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C1D02CB725AE95B30001CF6C /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C1D02CBE25AE96340001CF6C /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				C1D02CBF25AE96420001CF6C /* Entities */,
+				C1D02CC025AE96850001CF6C /* Data Source */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		C1D02CBF25AE96420001CF6C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C1D02CCF25AEC1770001CF6C /* BibleChapter.swift */,
+				C1DDA40625B295A400FCFDD3 /* BibleReadingSchedule.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		C1D02CC025AE96850001CF6C /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				C1D02CC125AE96C70001CF6C /* Local */,
+			);
+			path = "Data Source";
+			sourceTree = "<group>";
+		};
+		C1D02CC125AE96C70001CF6C /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				C1D02CC725AE97AF0001CF6C /* BibleManager.swift */,
+				C1103ABE25BE60AA002AEABA /* SchedulesManager.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		C1DDA3F225B1D70C00FCFDD3 /* SelectBibleReading */ = {
+			isa = PBXGroup;
+			children = (
+				C1E7CB0125B595FA00E14AB7 /* Components */,
+				C1DDA3F325B1D74500FCFDD3 /* SelectBibleReadingRouter.swift */,
+				C1DDA3F625B1D74500FCFDD3 /* SelectBibleReadingBuilder.swift */,
+				C1DDA3F725B1D74500FCFDD3 /* SelectBibleReadingInteractor.swift */,
+				C1DDA3F525B1D74500FCFDD3 /* SelectBibleReadingViewController.swift */,
+				C1DDA3F425B1D74500FCFDD3 /* SelectBibleReadingViewController.storyboard */,
+			);
+			path = SelectBibleReading;
+			sourceTree = "<group>";
+		};
+		C1DFDD6B25BB231E004CD1E3 /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				C1DFDD6C25BB2368004CD1E3 /* DayRouter.swift */,
+				C1DFDD6F25BB2368004CD1E3 /* DayBuilder.swift */,
+				C1DFDD7025BB2368004CD1E3 /* DayInteractor.swift */,
+				C1DFDD6E25BB2368004CD1E3 /* DayViewController.swift */,
+				C1DFDD6D25BB2368004CD1E3 /* DayViewController.storyboard */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
+		C1E7CB0125B595FA00E14AB7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C1E7CB0225B5961200E14AB7 /* BibleReadingCell.swift */,
+				C1E7CB0325B5961200E14AB7 /* BibleReadingCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C1FB96AF25BFAC9700D470A9 /* BibleFont */ = {
+			isa = PBXGroup;
+			children = (
+				C1FB96B025BFACAE00D470A9 /* BibleFontRouter.swift */,
+				C1FB96B325BFACAE00D470A9 /* BibleFontBuilder.swift */,
+				C1FB96B425BFACAE00D470A9 /* BibleFontInteractor.swift */,
+				C1FB96B225BFACAE00D470A9 /* BibleFontViewController.swift */,
+				C1FB96B125BFACAE00D470A9 /* BibleFontViewController.storyboard */,
+			);
+			path = BibleFont;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +597,19 @@
 			dependencies = (
 			);
 			name = "Arise&Shine";
+			packageProductDependencies = (
+				C168CF2925AC8667008C1AFE /* RIBs */,
+				C168CF2F25AC8722008C1AFE /* RxSwift */,
+				C168CF3125AC8722008C1AFE /* RxCocoa */,
+				C168CF3725AC8745008C1AFE /* ReactorKit */,
+				C1D02C3925AC99ED0001CF6C /* SQLite */,
+				C1D02C3F25ADBB810001CF6C /* RxAppState */,
+				C1682BC625AFDACD00E8564A /* FSCalendar */,
+				C1682BD725AFE4EC00E8564A /* SnapKit */,
+				C12B917825B04A1300DD6FB1 /* Then */,
+				C1FB96AA25BFAC4F00D470A9 /* PanModal */,
+				C1BE03A725C0976800D028E7 /* Toaster */,
+			);
 			productName = "Arise&Shine";
 			productReference = C168CEF225AC85C9008C1AFE /* Arise&Shine.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +681,18 @@
 				Base,
 			);
 			mainGroup = C168CEE925AC85C9008C1AFE;
+			packageReferences = (
+				C168CF2825AC8667008C1AFE /* XCRemoteSwiftPackageReference "RIBs" */,
+				C168CF2E25AC8722008C1AFE /* XCRemoteSwiftPackageReference "RxSwift" */,
+				C168CF3625AC8745008C1AFE /* XCRemoteSwiftPackageReference "ReactorKit" */,
+				C1D02C3825AC99ED0001CF6C /* XCRemoteSwiftPackageReference "SQLite" */,
+				C1D02C3E25ADBB810001CF6C /* XCRemoteSwiftPackageReference "RxAppState" */,
+				C1682BC525AFDACD00E8564A /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				C1682BD625AFE4EC00E8564A /* XCRemoteSwiftPackageReference "SnapKit" */,
+				C12B917725B04A1300DD6FB1 /* XCRemoteSwiftPackageReference "Then" */,
+				C1FB96A925BFAC4F00D470A9 /* XCRemoteSwiftPackageReference "PanModal" */,
+				C1BE03A625C0976800D028E7 /* XCRemoteSwiftPackageReference "Toaster" */,
+			);
 			productRefGroup = C168CEF325AC85C9008C1AFE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,9 +709,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1DFDD7225BB2368004CD1E3 /* DayViewController.storyboard in Resources */,
+				C12B916525B0340800DD6FB1 /* SettingViewController.storyboard in Resources */,
 				C168CF0225AC85CC008C1AFE /* LaunchScreen.storyboard in Resources */,
+				C1682BA725AF316F00E8564A /* CalendarViewController.storyboard in Resources */,
+				C1682BCF25AFDCEA00E8564A /* MonthViewController.storyboard in Resources */,
+				C1DDA3F925B1D74500FCFDD3 /* SelectBibleReadingViewController.storyboard in Resources */,
+				C1E7CB0525B5961200E14AB7 /* BibleReadingCell.xib in Resources */,
+				C12B917325B03DE400DD6FB1 /* BibleVerseCell.xib in Resources */,
 				C168CEFF25AC85CC008C1AFE /* Assets.xcassets in Resources */,
-				C168CEFD25AC85C9008C1AFE /* Main.storyboard in Resources */,
+				C1FB96B625BFACAF00D470A9 /* BibleFontViewController.storyboard in Resources */,
+				C101639725B0950F0079EB69 /* SelectingVerseViewController.xib in Resources */,
+				C1D02C2B25AC939A0001CF6C /* BibleViewController.storyboard in Resources */,
+				C1D02C7325AE05AF0001CF6C /* Kor.sqlite3 in Resources */,
+				C1D02CB025AE89A40001CF6C /* SelectViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +747,67 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C168CEFA25AC85C9008C1AFE /* ViewController.swift in Sources */,
+				C1FB96B925BFACAF00D470A9 /* BibleFontInteractor.swift in Sources */,
+				C1D02C8D25AE74F20001CF6C /* NSObject + Ex.swift in Sources */,
+				C168CF4A25AC8834008C1AFE /* RootViewController.swift in Sources */,
+				C101639325B0950F0079EB69 /* SelectingVerseRouter.swift in Sources */,
+				C1D02C1125AC89E20001CF6C /* AppComponent.swift in Sources */,
+				C1D02C3425AC94EC0001CF6C /* UINavigation + Ex.swift in Sources */,
+				C1D02CA525AE83120001CF6C /* BaseViewController.swift in Sources */,
+				C168CF4925AC8834008C1AFE /* RootRouter.swift in Sources */,
+				C101639625B0950F0079EB69 /* SelectingVerseInteractor.swift in Sources */,
+				C12B916825B0340800DD6FB1 /* SettingInteractor.swift in Sources */,
+				C1682BA925AF316F00E8564A /* CalendarBuilder.swift in Sources */,
+				C1D02C2D25AC939A0001CF6C /* BibleBuilder.swift in Sources */,
+				C1682BBB25AF379800E8564A /* MonthViewController.swift in Sources */,
+				C12B916425B0340800DD6FB1 /* SettingRouter.swift in Sources */,
+				C1BE039925C07F4600D028E7 /* UserDefaults + Ex.swift in Sources */,
+				C101639525B0950F0079EB69 /* SelectingVerseBuilder.swift in Sources */,
+				C1682BAA25AF316F00E8564A /* CalendarInteractor.swift in Sources */,
+				C1DFDD7125BB2368004CD1E3 /* DayRouter.swift in Sources */,
+				C101639425B0950F0079EB69 /* SelectingVerseViewController.swift in Sources */,
+				C1D02C8825AE74BF0001CF6C /* UIViewController + Ex.swift in Sources */,
+				C1682BBD25AF379800E8564A /* MonthInteractor.swift in Sources */,
+				C1DDA3FC25B1D74500FCFDD3 /* SelectBibleReadingInteractor.swift in Sources */,
+				C1103ABF25BE60AA002AEABA /* SchedulesManager.swift in Sources */,
+				C1FB96B525BFACAE00D470A9 /* BibleFontRouter.swift in Sources */,
+				C1D02C2A25AC939A0001CF6C /* BibleRouter.swift in Sources */,
+				C1DFDD7525BB2368004CD1E3 /* DayInteractor.swift in Sources */,
+				C168CF4C25AC8834008C1AFE /* RootInteractor.swift in Sources */,
+				C1D02CB125AE89A40001CF6C /* SelectViewController.swift in Sources */,
+				C1D02CAF25AE89A40001CF6C /* SelectRouter.swift in Sources */,
+				C12B916625B0340800DD6FB1 /* SettingViewController.swift in Sources */,
+				C1682BA825AF316F00E8564A /* CalendarViewController.swift in Sources */,
+				C1D02C1D25AC8DAA0001CF6C /* MainTabBarInteractor.swift in Sources */,
+				C1D02CC825AE97AF0001CF6C /* BibleManager.swift in Sources */,
+				C1D02CB225AE89A40001CF6C /* SelectBuilder.swift in Sources */,
+				C1D02C1B25AC8DAA0001CF6C /* MainTabBarViewController.swift in Sources */,
+				C1682BBA25AF379800E8564A /* MonthRouter.swift in Sources */,
+				C1FB96B825BFACAF00D470A9 /* BibleFontBuilder.swift in Sources */,
+				C1DDA3F825B1D74500FCFDD3 /* SelectBibleReadingRouter.swift in Sources */,
+				C12B916725B0340800DD6FB1 /* SettingBuilder.swift in Sources */,
+				C1D02CD025AEC1770001CF6C /* BibleChapter.swift in Sources */,
+				C1E7CB0425B5961200E14AB7 /* BibleReadingCell.swift in Sources */,
+				C1DFDD7425BB2368004CD1E3 /* DayBuilder.swift in Sources */,
+				C1DDA3FA25B1D74500FCFDD3 /* SelectBibleReadingViewController.swift in Sources */,
+				C1FB96B725BFACAF00D470A9 /* BibleFontViewController.swift in Sources */,
+				C1D02C2E25AC939A0001CF6C /* BibleInteractor.swift in Sources */,
+				C1D02C1C25AC8DAA0001CF6C /* MainTabBarBuilder.swift in Sources */,
+				C1D02C1A25AC8DAA0001CF6C /* MainTabBarRouter.swift in Sources */,
+				C1D02CBA25AE961F0001CF6C /* BiblePresentableState.swift in Sources */,
+				C1DDA40725B295A400FCFDD3 /* BibleReadingSchedule.swift in Sources */,
+				C1682BBC25AF379800E8564A /* MonthBuilder.swift in Sources */,
+				C1682BA625AF316F00E8564A /* CalendarRouter.swift in Sources */,
 				C168CEF625AC85C9008C1AFE /* AppDelegate.swift in Sources */,
+				C12B917225B03DE400DD6FB1 /* BibleVerseCell.swift in Sources */,
 				C168CEF825AC85C9008C1AFE /* SceneDelegate.swift in Sources */,
+				C1DDA3FB25B1D74500FCFDD3 /* SelectBibleReadingBuilder.swift in Sources */,
+				C1DFDD7325BB2368004CD1E3 /* DayViewController.swift in Sources */,
+				C168CF4B25AC8834008C1AFE /* RootBuilder.swift in Sources */,
+				C1D02C2C25AC939A0001CF6C /* BibleViewController.swift in Sources */,
+				C1D02CB325AE89A40001CF6C /* SelectInteractor.swift in Sources */,
+				C1682BB025AF368C00E8564A /* ChildViewControllable.swift in Sources */,
+				C1103ABA25BDA111002AEABA /* UITabBarController + Ex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +843,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C168CEFB25AC85C9008C1AFE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C168CEFC25AC85C9008C1AFE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C168CF0025AC85CC008C1AFE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,7 +905,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +960,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -436,17 +975,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJQB4DVQ35;
-				INFOPLIST_FILE = "Arise&Shine/Info.plist";
+				INFOPLIST_FILE = "Arise&Shine/Resource/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wannagohome.Arise-Shine";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.YDFC.Arise-Shine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -455,17 +998,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJQB4DVQ35;
-				INFOPLIST_FILE = "Arise&Shine/Info.plist";
+				INFOPLIST_FILE = "Arise&Shine/Resource/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wannagohome.Arise-Shine";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.YDFC.Arise-Shine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -593,6 +1140,147 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C12B917725B04A1300DD6FB1 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+		C1682BC525AFDACD00E8564A /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.2;
+			};
+		};
+		C1682BD625AFE4EC00E8564A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		C168CF2825AC8667008C1AFE /* XCRemoteSwiftPackageReference "RIBs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/RIBs";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		C168CF2E25AC8722008C1AFE /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = exactVersion;
+				version = 5.1.1;
+			};
+		};
+		C168CF3625AC8745008C1AFE /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactorKit/ReactorKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+		C1BE03A625C0976800D028E7 /* XCRemoteSwiftPackageReference "Toaster" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wannagohome/Toaster";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+		C1D02C3825AC99ED0001CF6C /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.12.2;
+			};
+		};
+		C1D02C3E25ADBB810001CF6C /* XCRemoteSwiftPackageReference "RxAppState" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pixeldock/RxAppState";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.1;
+			};
+		};
+		C1FB96A925BFAC4F00D470A9 /* XCRemoteSwiftPackageReference "PanModal" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/slackhq/PanModal";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C12B917825B04A1300DD6FB1 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C12B917725B04A1300DD6FB1 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		C1682BC625AFDACD00E8564A /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1682BC525AFDACD00E8564A /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+		C1682BD725AFE4EC00E8564A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1682BD625AFE4EC00E8564A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		C168CF2925AC8667008C1AFE /* RIBs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C168CF2825AC8667008C1AFE /* XCRemoteSwiftPackageReference "RIBs" */;
+			productName = RIBs;
+		};
+		C168CF2F25AC8722008C1AFE /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C168CF2E25AC8722008C1AFE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		C168CF3125AC8722008C1AFE /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C168CF2E25AC8722008C1AFE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		C168CF3725AC8745008C1AFE /* ReactorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C168CF3625AC8745008C1AFE /* XCRemoteSwiftPackageReference "ReactorKit" */;
+			productName = ReactorKit;
+		};
+		C1BE03A725C0976800D028E7 /* Toaster */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1BE03A625C0976800D028E7 /* XCRemoteSwiftPackageReference "Toaster" */;
+			productName = Toaster;
+		};
+		C1D02C3925AC99ED0001CF6C /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1D02C3825AC99ED0001CF6C /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+		C1D02C3F25ADBB810001CF6C /* RxAppState */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1D02C3E25ADBB810001CF6C /* XCRemoteSwiftPackageReference "RxAppState" */;
+			productName = RxAppState;
+		};
+		C1FB96AA25BFAC4F00D470A9 /* PanModal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1FB96A925BFAC4F00D470A9 /* XCRemoteSwiftPackageReference "PanModal" */;
+			productName = PanModal;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C168CEEA25AC85C9008C1AFE /* Project object */;
 }

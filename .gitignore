@@ -1,0 +1,12 @@
+xcuserdata/
+
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+.build/
+fastlane/report.xml
+fastlane/Preview.html
+Fastlane/Matchfile
+fastlane/screenshots/**/*.png
+fastlane/test_output

@@ -1,0 +1,118 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+module Constant
+  PROJECT = "Arise&Shine.xcodeproj"
+  TARGET_RELEASE = "Release"
+  TARGET_DEBUG = "Arise&Shine"
+  APP_IDENTIFIERS = ["org.YDFC.Arise-Shine"]
+  FIREBASE_APP_ID = "1:369131417401:ios:232e578e1c84eb58bf42e8"
+  FIREBASE_TEST_GROUP = "tester"
+  REMOTE_NAME = "origin"
+end
+
+def get_version()
+  return get_version_number(
+    xcodeproj: Constant::PROJECT,
+     target: Constant::TARGET_RELEASE
+   )
+end
+
+def get_build()
+  return get_build_number(xcodeproj: Constant::PROJECT)
+end
+
+def set_version(version)
+  increment_version_number(
+    version_number: version,
+    xcodeproj: Constant::PROJECT
+  )
+end
+
+def set_build(build)
+  increment_build_number(
+    build_number: build,
+    xcodeproj: Constant::PROJECT
+  )
+end
+
+def increase_version(increase_by = 1)
+  version = get_version()
+  splited = version.split('.')
+  major = splited[0]
+  minor = splited[1]
+  patch = splited[2]
+  new_version = "#{major}.#{minor}.#{patch.to_i + increase_by}"
+  set_version(new_version)
+  return new_version
+end
+
+def increase_build(increase_by = 1)
+  build = get_build()
+  new_build = "#{build + increase_by}"
+  set_build(new_build)
+  return new_build
+end
+
+def version_bump()
+  current_build = increase_build()
+  git_add
+  commit_message = "버전 변경 #{current_build}"
+  commit_version_bump(
+    message: commit_message,
+    xcodeproj: Constant::PROJECT,
+    force: true
+    )
+  end
+
+def get_commit_log()
+  last_tag = last_git_tag()
+  add_git_tag
+  changelog = changelog_from_git_commits(
+    between: [last_tag, "HEAD"]
+  )
+  current_build = get_build()
+  log = """
+  #{current_build} 버전은 아래와 같은 수정사항이 반영되었습니다.
+  #{changelog}
+  """
+  return log
+end
+
+def upload_to_firebase()
+  match(app_identifier: Constant::APP_IDENTIFIERS, type: "adhoc")
+  build_app(project: Constant::PROJECT, scheme: Constant::TARGET_DEBUG, configuration: "Debug")
+  version_bump()
+  release_notes = get_commit_log()
+  firebase_app_distribution(
+    app: Constant::FIREBASE_APP_ID,
+    groups: Constant::FIREBASE_TEST_GROUP,
+    release_notes: release_notes
+  )
+  push_to_git_remote(
+    remote: Constant::REMOTE_NAME,
+    tags: false
+  )
+end
+
+
+platform :ios do
+  desc "Distribute to Firebase"
+  lane :firebase do
+    upload_to_firebase()
+  end
+end
