@@ -63,7 +63,7 @@ end
 
 def increase_build(increase_by = 1)
   build = get_build()
-  new_build = "#{build + increase_by}"
+  new_build = "#{build.to_i + increase_by}"
   set_build(new_build)
   return new_build
 end
