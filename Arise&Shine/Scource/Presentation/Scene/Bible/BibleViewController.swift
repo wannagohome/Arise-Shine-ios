@@ -159,15 +159,18 @@ extension BibleViewController: UIScrollViewDelegate {
         
         let isGoingDown = velocity.y > 0
         let navBarHeight = self.navigationController!.navigationBar.frame.height
+        let navInsets = UIEdgeInsets(top: isGoingDown ? 20 : 0, left: 0, bottom: 0, right: 0)
         
         self.tabBarController?.setTabBarHidden(isGoingDown, animated: true)
-        self.titleButton.titleEdgeInsets = UIEdgeInsets(top: isGoingDown ? 20 : 0, left: 0, bottom: 0, right: 0)
+        self.titleButton.titleEdgeInsets = navInsets
+        self.fontButton.titleEdgeInsets = navInsets
         self.topConstraint.constant = isGoingDown ? -navBarHeight / 2 : 0
         
         UIView.animate(withDuration: 0.3) {
             self.navigationController?.navigationBar.transform =
                 .init(translationX: 0, y: isGoingDown ? -navBarHeight / 2 : 0)
             self.titleButton.layoutIfNeeded()
+            self.fontButton.layoutIfNeeded()
             self.view.layoutIfNeeded()
         }
     }
