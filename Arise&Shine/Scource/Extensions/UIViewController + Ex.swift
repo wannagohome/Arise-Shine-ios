@@ -34,6 +34,10 @@ enum StoryboardType {
     case month
     case day
     
+    case prayer
+    case newVIP
+    case vipDetail
+    
     case setting
     case selectBibleReading
     
@@ -52,6 +56,13 @@ enum StoryboardType {
             return "MonthViewController"
         case .day:
             return "DayViewController"
+            
+        case .prayer:
+            return "PrayerViewController"
+        case .newVIP:
+            return "NewVIPViewController"
+        case .vipDetail:
+            return "VIPDetailViewController"
             
         case .setting:
             return "SettingViewController"

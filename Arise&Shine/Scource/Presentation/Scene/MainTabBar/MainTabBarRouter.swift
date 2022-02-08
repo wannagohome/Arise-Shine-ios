@@ -11,6 +11,7 @@ protocol MainTabBarInteractable:
     Interactable,
     BibleListener,
     CalendarListener,
+    PrayerListener,
     SettingListener {
     
     var router: MainTabBarRouting? { get set }
@@ -31,6 +32,9 @@ final class MainTabBarRouter:
     private let calendarBuilder: CalendarBuildable
     private var calendarRouter: CalendarRouting?
     
+    private let prayerBuilder: PrayerBuildable
+    private var prayerRouter: PrayerRouting?
+    
     private let settingBuilder: SettingBuildable
     private var settingRouter: SettingRouting?
     
@@ -40,10 +44,12 @@ final class MainTabBarRouter:
          viewController: MainTabBarViewControllable,
          bibleBuilder: BibleBuildable,
          calendarBuilder: CalendarBuildable,
+         prayerBuilder: PrayerBuildable,
          settingBuilder: SettingBuildable) {
         
         self.bibleBuilder = bibleBuilder
         self.calendarBuilder = calendarBuilder
+        self.prayerBuilder = prayerBuilder
         self.settingBuilder = settingBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
@@ -55,6 +61,7 @@ final class MainTabBarRouter:
         super.didLoad()
         self.attatchBible()
         self.attatchCalendar()
+        self.attatchPrayer()
         self.attatchSetting()
     }
     
@@ -70,6 +77,12 @@ final class MainTabBarRouter:
         let calendarRouter = self.calendarBuilder.build(withListener: self.interactor)
         self.calendarRouter = calendarRouter
         self.attachChild(calendarRouter)
+    }
+    
+    private func attatchPrayer() {
+        let prayerRouter = self.prayerBuilder.build(withListener: self.interactor)
+        self.prayerRouter = prayerRouter
+        self.attachChild(prayerRouter)
     }
     
     private func attatchSetting() {
