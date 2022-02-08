@@ -87,7 +87,7 @@ def get_commit_log()
   )
   current_build = get_build()
   log = """
-  #{current_build} 버전은 아래와 같은 수정사항이 반영되었습니다.
+  #{current_build} 버전 업데이트 내역
   #{changelog}
   """
   return log

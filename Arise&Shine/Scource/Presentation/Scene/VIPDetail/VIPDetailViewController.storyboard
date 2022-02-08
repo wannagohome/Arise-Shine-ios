@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vKn-9P-Ny8">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="GzV-lN-fg7">
+            <objects>
+                <viewController storyboardIdentifier="VIPDetailViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vKn-9P-Ny8" customClass="VIPDetailViewController" customModule="Arise_Shine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BNZ-bO-rhc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UaA-fF-oST">
+                                <rect key="frame" x="15" y="30.5" width="90" height="89"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="7Y3-RA-txT"/>
+                                    <constraint firstAttribute="width" constant="90" id="LcL-Av-n5v"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJz-3R-35S">
+                                <rect key="frame" x="125" y="40" width="31.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기도제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4m-jq-UXy">
+                                <rect key="frame" x="15" y="175" width="86.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRW-ps-Rnf">
+                                <rect key="frame" x="131.5" y="184" width="26" height="22"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="plus.rectangle.on.rectangle" catalog="system"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="azd-dh-G6h">
+                                <rect key="frame" x="0.0" y="225" width="375" height="442"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HgA-Aw-ocO"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HRW-ps-Rnf" firstAttribute="leading" secondItem="U4m-jq-UXy" secondAttribute="trailing" constant="30" id="0yP-Yf-VqU"/>
+                            <constraint firstItem="HgA-Aw-ocO" firstAttribute="trailing" secondItem="azd-dh-G6h" secondAttribute="trailing" id="6He-De-a0e"/>
+                            <constraint firstItem="HgA-Aw-ocO" firstAttribute="bottom" secondItem="azd-dh-G6h" secondAttribute="bottom" id="A2D-bS-jOP"/>
+                            <constraint firstItem="VJz-3R-35S" firstAttribute="top" secondItem="UaA-fF-oST" secondAttribute="top" constant="10" id="C7n-Jj-Q2x"/>
+                            <constraint firstItem="U4m-jq-UXy" firstAttribute="leading" secondItem="UaA-fF-oST" secondAttribute="leading" id="CDC-wn-b3m"/>
+                            <constraint firstItem="U4m-jq-UXy" firstAttribute="top" secondItem="UaA-fF-oST" secondAttribute="bottom" constant="55" id="GOU-fC-WRJ"/>
+                            <constraint firstItem="VJz-3R-35S" firstAttribute="leading" secondItem="UaA-fF-oST" secondAttribute="trailing" constant="20" id="HBR-wy-X1O"/>
+                            <constraint firstItem="UaA-fF-oST" firstAttribute="leading" secondItem="HgA-Aw-ocO" secondAttribute="leading" constant="15" id="RXH-h3-BCo"/>
+                            <constraint firstItem="azd-dh-G6h" firstAttribute="leading" secondItem="HgA-Aw-ocO" secondAttribute="leading" id="pFv-u1-ims"/>
+                            <constraint firstItem="HRW-ps-Rnf" firstAttribute="centerY" secondItem="U4m-jq-UXy" secondAttribute="centerY" constant="5" id="qOd-Ib-VOL"/>
+                            <constraint firstItem="azd-dh-G6h" firstAttribute="top" secondItem="U4m-jq-UXy" secondAttribute="bottom" constant="20" id="snN-IS-4w8"/>
+                            <constraint firstItem="UaA-fF-oST" firstAttribute="top" secondItem="HgA-Aw-ocO" secondAttribute="top" constant="30" id="yyo-hc-ZxL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="HRW-ps-Rnf" id="14h-x9-GGC"/>
+                        <outlet property="name" destination="VJz-3R-35S" id="iDV-tq-Qzp"/>
+                        <outlet property="tableView" destination="azd-dh-G6h" id="fQN-f2-zGH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0X-am-vwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="204.64767616191907"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="plus.rectangle.on.rectangle" catalog="system" width="128" height="96"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

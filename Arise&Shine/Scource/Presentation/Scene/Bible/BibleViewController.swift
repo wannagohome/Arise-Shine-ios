@@ -58,7 +58,6 @@ final class BibleViewController:
     override func viewDidLoad() {
         super.viewDidLoad()
         self.bind(listener: self.listener)
-        self.navigationController?.navigationBar.isTranslucent = false
     }
     
     // MARK: - Inheritance
