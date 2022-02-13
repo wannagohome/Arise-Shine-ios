@@ -9,9 +9,13 @@ import RIBs
 import RxSwift
 import ReactorKit
 import UIKit
+import PanModal
 
 enum VIPDetailPresentableAction {
     case viewWillAppear
+    case close
+    case tapAdd
+    case add(Prayer)
 }
 
 protocol VIPDetailPresentableListener: class {
@@ -22,8 +26,7 @@ protocol VIPDetailPresentableListener: class {
 
 final class VIPDetailViewController:
     BaseViewController,
-    VIPDetailPresentable,
-    VIPDetailViewControllable {
+    VIPDetailPresentable {
     
     // MARK: - Properties
 
@@ -45,7 +48,7 @@ final class VIPDetailViewController:
     // MARK: - Inheritance
     
     override func attribute() {
-        
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.description())
     }
     
     // MARK: - Private methods
@@ -59,6 +62,7 @@ final class VIPDetailViewController:
     
     private func bindActions(to listener: VIPDetailPresentableListener) {
         self.bindViewWillAppear(to: listener)
+        self.bindTapAdd(to: listener)
     }
     
     private func bindState(from listener: VIPDetailPresentableListener) {
@@ -74,6 +78,24 @@ extension VIPDetailViewController {
     }
 }
 
+extension VIPDetailViewController: VIPDetailViewControllable {
+    func present(viewController: ViewControllable) {
+        if let modal = viewController as? UIViewController & PanModalPresentable {
+            self.presentPanModal(modal)
+        } else {
+            self.navigationController?.pushViewController(viewController.uiviewController, animated: true)
+        }
+    }
+    
+    func dismiss(viewController: ViewControllable) {
+        if presentedViewController === viewController.uiviewController {
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    
+}
+
 extension VIPDetailViewController {
     
     // MARK: - Binding Action
@@ -81,6 +103,22 @@ extension VIPDetailViewController {
     func bindViewWillAppear(to listener: VIPDetailPresentableListener) {
         self.rx.viewWillAppear
             .map { _ in .viewWillAppear }
+            .bind(to: listener.action)
+            .disposed(by: self.disposeBag)
+    }
+    
+    func bindTapAdd(to listener: VIPDetailPresentableListener) {
+        self.addButton.rx.tap
+            .map { _ in .tapAdd }
+            .bind(to: listener.action)
+            .disposed(by: self.disposeBag)
+    }
+    
+    func bindViewDidDisappear(to listener: NewVIPPresentableListener,
+                              isDismissing: Bool) {
+        self.rx.viewDidDisappear
+            .filter { _ in isDismissing }
+            .map { _ in .close }
             .bind(to: listener.action)
             .disposed(by: self.disposeBag)
     }
@@ -98,7 +136,9 @@ extension VIPDetailViewController {
         listener.state.map { $0.prayers }
             .asDriver(onErrorDriveWith: .empty())
             .drive(self.tableView.rx.items) { tb, row, item in
-                return UITableViewCell()
+                let cell = tb.dequeueReusableCell(withIdentifier: UITableViewCell.description())!
+                cell.textLabel?.text = item.contents
+                return cell
             }
             .disposed(by: self.disposeBag)
     }

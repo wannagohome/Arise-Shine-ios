@@ -106,4 +106,8 @@ extension PrayerInteractor: PrayerInteractable {
     func closeBibleNewVIP() {
         self.router?.detachNewVIP()
     }
+    
+    func closeVIPDetail() {
+        self.router?.detachVIPDetail()
+    }
 }
