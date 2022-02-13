@@ -9,7 +9,9 @@ import RIBs
 
 protocol VIPDetailDependency: Dependency {}
 
-final class VIPDetailComponent: Component<VIPDetailDependency> {}
+final class VIPDetailComponent:
+    Component<VIPDetailDependency>,
+    NewPrayerDependency {}
 
 // MARK: - Builder
 
@@ -28,12 +30,15 @@ final class VIPDetailBuilder:
 
     func build(withListener listener: VIPDetailListener,
                vip: VIP) -> VIPDetailRouting {
-        let _ = VIPDetailComponent(dependency: dependency)
+        let component = VIPDetailComponent(dependency: dependency)
         let viewController = VIPDetailViewController.initWithStoryBoard()
         let interactor = VIPDetailInteractor(presenter: viewController,
                                              initialState: .init(vip: vip))
         interactor.listener = listener
+        
+        let newPrayerBuiler = NewPrayerBuilder(dependency: component)
         return VIPDetailRouter(interactor: interactor,
-                               viewController: viewController)
+                               viewController: viewController,
+                               newPrayerBuilder: newPrayerBuiler)
     }
 }

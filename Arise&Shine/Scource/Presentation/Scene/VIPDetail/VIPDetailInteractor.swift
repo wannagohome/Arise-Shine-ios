@@ -10,7 +10,8 @@ import RxSwift
 import ReactorKit
 
 protocol VIPDetailRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func attatchNewPrayer(with vip: VIP)
+    func detatchNewPrayer()
 }
 
 protocol VIPDetailPresentable: Presentable {
@@ -19,7 +20,7 @@ protocol VIPDetailPresentable: Presentable {
 }
 
 protocol VIPDetailListener: class {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func closeVIPDetail()
 }
 
 struct VIPDetailPresentableState {
@@ -29,7 +30,6 @@ struct VIPDetailPresentableState {
 
 final class VIPDetailInteractor:
     PresentableInteractor<VIPDetailPresentable>,
-    VIPDetailInteractable,
     VIPDetailPresentableListener,
     Reactor {
     
@@ -40,6 +40,7 @@ final class VIPDetailInteractor:
     
     enum Mutation {
         case setPrayers([Prayer])
+        case addPrayer(Prayer)
     }
     
     var initialState: State
@@ -69,6 +70,17 @@ final class VIPDetailInteractor:
                 return .empty()
             }
             return Observable.just(Mutation.setPrayers(db.selectAll(of: id)))
+            
+        case .tapAdd:
+            self.router?.attatchNewPrayer(with: self.currentState.vip)
+            return .empty()
+            
+        case .add(let prayer):
+            return Observable.just(Mutation.addPrayer(prayer))
+            
+        case .close:
+            self.listener?.closeVIPDetail()
+            return .empty()
         }
     }
     
@@ -78,8 +90,22 @@ final class VIPDetailInteractor:
         switch mutation {
         case .setPrayers(let prayers):
             newSate.prayers = prayers
+            
+        case .addPrayer(let prayer):
+            newSate.prayers.append(prayer)
         }
         
         return newSate
     }
+}
+
+
+extension VIPDetailInteractor: VIPDetailInteractable {
+    func closeNewPrayer() {
+        self.router?.detatchNewPrayer()
+    }
+    
+    func addNew(prayer: Prayer) {
+        self.action.onNext(.add(prayer))
+    }   
 }

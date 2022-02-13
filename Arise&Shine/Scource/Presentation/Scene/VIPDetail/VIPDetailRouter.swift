@@ -7,20 +7,46 @@
 
 import RIBs
 
-protocol VIPDetailInteractable: Interactable {
+protocol VIPDetailInteractable:
+    Interactable,
+    NewPrayerListener {
     var router: VIPDetailRouting? { get set }
     var listener: VIPDetailListener? { get set }
 }
 
 protocol VIPDetailViewControllable: ViewControllable {
-    // TODO: Declare methods the router invokes to manipulate the view hierarchy.
+    func present(viewController: ViewControllable)
+    func dismiss(viewController: ViewControllable)
 }
 
-final class VIPDetailRouter: ViewableRouter<VIPDetailInteractable, VIPDetailViewControllable>, VIPDetailRouting {
-
-    // TODO: Constructor inject child builder protocols to allow building children.
-    override init(interactor: VIPDetailInteractable, viewController: VIPDetailViewControllable) {
+final class VIPDetailRouter:
+    ViewableRouter<VIPDetailInteractable, VIPDetailViewControllable>,
+    VIPDetailRouting {
+    
+    private let newPrayerBuilder: NewPrayerBuildable
+    private var newPrayerRouter: NewPrayerRouting?
+    
+    init(interactor: VIPDetailInteractable,
+         viewController: VIPDetailViewControllable,
+         newPrayerBuilder: NewPrayerBuildable) {
+        
+        self.newPrayerBuilder = newPrayerBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
+    }
+    
+    func attatchNewPrayer(with vip: VIP) {
+        let router = self.newPrayerBuilder.build(withListener: self.interactor, vip: vip)
+        self.newPrayerRouter = router
+        self.attachChild(router)
+        self.viewController.present(viewController: router.viewControllable)
+    }
+    
+    func detatchNewPrayer() {
+        if let router = self.newPrayerRouter {
+            self.detachChild(router)
+            self.viewController.dismiss(viewController: router.viewControllable)
+            self.newPrayerRouter = nil
+        }
     }
 }
