@@ -71,7 +71,7 @@ end
 def version_bump()
   current_build = increase_build()
   git_add
-  commit_message = "버전 변경 #{current_build}"
+  commit_message = "bump up version with #{current_build}"
   commit_version_bump(
     message: commit_message,
     xcodeproj: Constant::PROJECT,
