@@ -41,6 +41,7 @@ final class VIPDetailInteractor:
     enum Mutation {
         case setPrayers([Prayer])
         case addPrayer(Prayer)
+        case open(Prayer)
     }
     
     var initialState: State
@@ -81,6 +82,9 @@ final class VIPDetailInteractor:
         case .close:
             self.listener?.closeVIPDetail()
             return .empty()
+            
+        case .open(let prayer):
+            return Observable.just(Mutation.open(prayer))
         }
     }
     
@@ -93,6 +97,12 @@ final class VIPDetailInteractor:
             
         case .addPrayer(let prayer):
             newSate.prayers.append(prayer)
+            
+        case .open(let prayer):
+            if let index = newSate.prayers.indexOf(prayer) {
+                newSate.prayers[index].isOpened = true
+            }
+            
         }
         
         return newSate
@@ -108,4 +118,14 @@ extension VIPDetailInteractor: VIPDetailInteractable {
     func addNew(prayer: Prayer) {
         self.action.onNext(.add(prayer))
     }   
+}
+
+
+extension Array where Element: Equatable {
+    func indexOf(_ compare: Element) -> Int? {
+        for (index, item) in self.enumerated() {
+            if item == compare { return index }
+        }
+        return nil
+    }
 }

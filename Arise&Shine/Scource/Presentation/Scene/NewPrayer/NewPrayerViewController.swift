@@ -35,6 +35,7 @@ final class NewPrayerViewController:
     // MARK: - Views
     
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var placeholder: UILabel!
     @IBOutlet weak var bottomContraint: NSLayoutConstraint!
     let doneButton = UIButton()
     
@@ -65,6 +66,7 @@ final class NewPrayerViewController:
         
         self.bindActions(to: listener)
         self.bindState(from: listener)
+        self.bindTextView()
     }
     
     private func bindActions(to listener: NewPrayerPresentableListener) {
@@ -109,6 +111,14 @@ extension NewPrayerViewController {
             .withLatestFrom(self.textView.rx.text.orEmpty)
             .map { .done($0) }
             .bind(to: listener.action)
+            .disposed(by: self.disposeBag)
+    }
+    
+    func bindTextView() {
+        self.textView.rx.text.orEmpty
+            .map { !$0.isEmpty }
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(self.placeholder.rx.isHidden)
             .disposed(by: self.disposeBag)
     }
 }

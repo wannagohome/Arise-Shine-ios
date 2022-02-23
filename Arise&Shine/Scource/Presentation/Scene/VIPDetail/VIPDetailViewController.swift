@@ -16,6 +16,7 @@ enum VIPDetailPresentableAction {
     case close
     case tapAdd
     case add(Prayer)
+    case open(Prayer)
 }
 
 protocol VIPDetailPresentableListener: class {
@@ -48,7 +49,10 @@ final class VIPDetailViewController:
     // MARK: - Inheritance
     
     override func attribute() {
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.description())
+        self.tableView.register(UINib(nibName: "PrayerCell", bundle: nil),
+                                forCellReuseIdentifier: PrayerCell.description())
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 70
     }
     
     // MARK: - Private methods
@@ -135,11 +139,18 @@ extension VIPDetailViewController {
     func bindPrayers(from listener: VIPDetailPresentableListener) {
         listener.state.map { $0.prayers }
             .asDriver(onErrorDriveWith: .empty())
-            .drive(self.tableView.rx.items) { tb, row, item in
-                let cell = tb.dequeueReusableCell(withIdentifier: UITableViewCell.description())!
-                cell.textLabel?.text = item.contents
+            .drive(self.tableView.rx.items) { [weak self] tb, row, item in
+                let cell = tb.dequeueReusableCell(withIdentifier: PrayerCell.description()) as! PrayerCell
+                cell.configure(by: item)
+                cell.delegate = self
                 return cell
             }
             .disposed(by: self.disposeBag)
+    }
+}
+
+extension VIPDetailViewController: PrayerDelegate {
+    func open(_ prayer: Prayer) {
+        self.listener?.action.onNext(.open(prayer))
     }
 }
