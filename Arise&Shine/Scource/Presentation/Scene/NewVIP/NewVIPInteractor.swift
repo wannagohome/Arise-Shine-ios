@@ -19,11 +19,15 @@ protocol NewVIPPresentable: Presentable {
 }
 
 protocol NewVIPListener: class {
-    func addNewVIP(of name: String)
+    func addNewVIP(of name: String,
+                   description: String)
     func closeBibleNewVIP()
 }
 
-struct NewVIPPresentableState {}
+struct NewVIPPresentableState {
+    var name: String?
+    var description: String?
+}
 
 final class NewVIPInteractor:
     PresentableInteractor<NewVIPPresentable>,
@@ -36,7 +40,10 @@ final class NewVIPInteractor:
     typealias Action = NewVIPPresentableAction
     typealias State = NewVIPPresentableState
     
-    enum Mutaion {}
+    enum Mutaion {
+        case setName(String)
+        case setDescription(String)
+    }
     
     var initialState: State
     
@@ -63,10 +70,35 @@ final class NewVIPInteractor:
             self.listener?.closeBibleNewVIP()
             return .empty()
             
-        case .done(let name):
-            self.listener?.addNewVIP(of: name)
+        case .typeName(let name):
+            return Observable.just(Mutaion.setName(name))
+            
+        case .typeDescription(let desc):
+            return Observable.just(Mutaion.setDescription(desc))
+            
+        case .done:
+            guard let name = self.currentState.name,
+                  let desc = self.currentState.description else {
+                return .empty()
+            }
+            self.listener?.addNewVIP(of: name, description: desc)
             self.listener?.closeBibleNewVIP()
             return .empty()
         }
+    }
+    
+    func reduce(state: NewVIPPresentableState,
+                mutation: Mutaion) -> NewVIPPresentableState {
+        var newState = state
+        
+        switch mutation {
+        case .setName(let name):
+            newState.name = name
+            
+        case .setDescription(let desc):
+            newState.description = desc
+        }
+        
+        return newState
     }
 }

@@ -13,7 +13,7 @@ import RxDataSources
 import PanModal
 
 enum PrayerPresentableAction {
-    case add(String)
+    case add(String, String)
     case viewWillAppear
     case tapNewVIP
     case selectTable(VIP)

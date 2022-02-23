@@ -14,6 +14,7 @@
 		C101639725B0950F0079EB69 /* SelectingVerseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C101639225B0950F0079EB69 /* SelectingVerseViewController.xib */; };
 		C1103ABA25BDA111002AEABA /* UITabBarController + Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1103AB925BDA111002AEABA /* UITabBarController + Ex.swift */; };
 		C1103ABF25BE60AA002AEABA /* SchedulesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1103ABE25BE60AA002AEABA /* SchedulesManager.swift */; };
+		C11FF95C25CC574100E347D7 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = C11FF95B25CC574100E347D7 /* RxGesture */; };
 		C12069BE25C2E9D800C8A7B7 /* PrayerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12069B925C2E9D800C8A7B7 /* PrayerRouter.swift */; };
 		C12069BF25C2E9D800C8A7B7 /* PrayerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12069BA25C2E9D800C8A7B7 /* PrayerViewController.storyboard */; };
 		C12069C025C2E9D800C8A7B7 /* PrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12069BB25C2E9D800C8A7B7 /* PrayerViewController.swift */; };
@@ -79,6 +80,7 @@
 		C16BD22625C5170D00C8139F /* NewPrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BD22125C5170D00C8139F /* NewPrayerViewController.swift */; };
 		C16BD22725C5170D00C8139F /* NewPrayerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BD22225C5170D00C8139F /* NewPrayerBuilder.swift */; };
 		C16BD22825C5170D00C8139F /* NewPrayerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BD22325C5170D00C8139F /* NewPrayerInteractor.swift */; };
+		C1A3331F25E0360B007D0807 /* UILabel + Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A3331E25E0360B007D0807 /* UILabel + Ex.swift */; };
 		C1BE039925C07F4600D028E7 /* UserDefaults + Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BE039825C07F4600D028E7 /* UserDefaults + Ex.swift */; };
 		C1BE03A825C0976800D028E7 /* Toaster in Frameworks */ = {isa = PBXBuildFile; productRef = C1BE03A725C0976800D028E7 /* Toaster */; };
 		C1D02C1125AC89E20001CF6C /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02C1025AC89E20001CF6C /* AppComponent.swift */; };
@@ -117,6 +119,9 @@
 		C1DFDD7325BB2368004CD1E3 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFDD6E25BB2368004CD1E3 /* DayViewController.swift */; };
 		C1DFDD7425BB2368004CD1E3 /* DayBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFDD6F25BB2368004CD1E3 /* DayBuilder.swift */; };
 		C1DFDD7525BB2368004CD1E3 /* DayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFDD7025BB2368004CD1E3 /* DayInteractor.swift */; };
+		C1E775F525CD705700C2FCB9 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = C1E775F425CD705700C2FCB9 /* RxKeyboard */; };
+		C1E775FC25CE3CA100C2FCB9 /* PrayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E775FA25CE3CA100C2FCB9 /* PrayerCell.swift */; };
+		C1E775FD25CE3CA100C2FCB9 /* PrayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E775FB25CE3CA100C2FCB9 /* PrayerCell.xib */; };
 		C1E7CB0425B5961200E14AB7 /* BibleReadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E7CB0225B5961200E14AB7 /* BibleReadingCell.swift */; };
 		C1E7CB0525B5961200E14AB7 /* BibleReadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E7CB0325B5961200E14AB7 /* BibleReadingCell.xib */; };
 		C1FB96AB25BFAC4F00D470A9 /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = C1FB96AA25BFAC4F00D470A9 /* PanModal */; };
@@ -214,6 +219,7 @@
 		C16BD22125C5170D00C8139F /* NewPrayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPrayerViewController.swift; sourceTree = "<group>"; };
 		C16BD22225C5170D00C8139F /* NewPrayerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPrayerBuilder.swift; sourceTree = "<group>"; };
 		C16BD22325C5170D00C8139F /* NewPrayerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPrayerInteractor.swift; sourceTree = "<group>"; };
+		C1A3331E25E0360B007D0807 /* UILabel + Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Ex.swift"; sourceTree = "<group>"; };
 		C1BE039825C07F4600D028E7 /* UserDefaults + Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + Ex.swift"; sourceTree = "<group>"; };
 		C1D02C1025AC89E20001CF6C /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		C1D02C1625AC8DAA0001CF6C /* MainTabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarRouter.swift; sourceTree = "<group>"; };
@@ -249,6 +255,8 @@
 		C1DFDD6E25BB2368004CD1E3 /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
 		C1DFDD6F25BB2368004CD1E3 /* DayBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayBuilder.swift; sourceTree = "<group>"; };
 		C1DFDD7025BB2368004CD1E3 /* DayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInteractor.swift; sourceTree = "<group>"; };
+		C1E775FA25CE3CA100C2FCB9 /* PrayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerCell.swift; sourceTree = "<group>"; };
+		C1E775FB25CE3CA100C2FCB9 /* PrayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerCell.xib; sourceTree = "<group>"; };
 		C1E7CB0225B5961200E14AB7 /* BibleReadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleReadingCell.swift; sourceTree = "<group>"; };
 		C1E7CB0325B5961200E14AB7 /* BibleReadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BibleReadingCell.xib; sourceTree = "<group>"; };
 		C1FB96B025BFACAE00D470A9 /* BibleFontRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleFontRouter.swift; sourceTree = "<group>"; };
@@ -267,8 +275,10 @@
 				C12069E425C32F6A00C8A7B7 /* RxDataSources in Frameworks */,
 				C12B917925B04A1300DD6FB1 /* Then in Frameworks */,
 				C1BE03A825C0976800D028E7 /* Toaster in Frameworks */,
+				C1E775F525CD705700C2FCB9 /* RxKeyboard in Frameworks */,
 				C1682BD825AFE4EC00E8564A /* SnapKit in Frameworks */,
 				C12069E225C32F6A00C8A7B7 /* Differentiator in Frameworks */,
+				C11FF95C25CC574100E347D7 /* RxGesture in Frameworks */,
 				C168CF3225AC8722008C1AFE /* RxCocoa in Frameworks */,
 				C1FB96AB25BFAC4F00D470A9 /* PanModal in Frameworks */,
 				C1D02C4025ADBB810001CF6C /* RxAppState in Frameworks */,
@@ -478,6 +488,7 @@
 		C16BD1F125C4828100C8139F /* VIPDetail */ = {
 			isa = PBXGroup;
 			children = (
+				C1E775F925CE3C7700C2FCB9 /* Components */,
 				C16BD1F225C486CC00C8139F /* VIPDetailRouter.swift */,
 				C16BD1F525C486CC00C8139F /* VIPDetailBuilder.swift */,
 				C16BD1F625C486CC00C8139F /* VIPDetailInteractor.swift */,
@@ -531,6 +542,7 @@
 				C1D02C8C25AE74F20001CF6C /* NSObject + Ex.swift */,
 				C1103AB925BDA111002AEABA /* UITabBarController + Ex.swift */,
 				C1BE039825C07F4600D028E7 /* UserDefaults + Ex.swift */,
+				C1A3331E25E0360B007D0807 /* UILabel + Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -688,6 +700,15 @@
 			path = Day;
 			sourceTree = "<group>";
 		};
+		C1E775F925CE3C7700C2FCB9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C1E775FA25CE3CA100C2FCB9 /* PrayerCell.swift */,
+				C1E775FB25CE3CA100C2FCB9 /* PrayerCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		C1E7CB0125B595FA00E14AB7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -739,6 +760,8 @@
 				C1BE03A725C0976800D028E7 /* Toaster */,
 				C12069E125C32F6A00C8A7B7 /* Differentiator */,
 				C12069E325C32F6A00C8A7B7 /* RxDataSources */,
+				C11FF95B25CC574100E347D7 /* RxGesture */,
+				C1E775F425CD705700C2FCB9 /* RxKeyboard */,
 			);
 			productName = "Arise&Shine";
 			productReference = C168CEF225AC85C9008C1AFE /* Arise&Shine.app */;
@@ -823,6 +846,8 @@
 				C1FB96A925BFAC4F00D470A9 /* XCRemoteSwiftPackageReference "PanModal" */,
 				C1BE03A625C0976800D028E7 /* XCRemoteSwiftPackageReference "Toaster" */,
 				C12069E025C32F6900C8A7B7 /* XCRemoteSwiftPackageReference "RxDataSources" */,
+				C11FF95A25CC574100E347D7 /* XCRemoteSwiftPackageReference "RxGesture" */,
+				C1E775F325CD705700C2FCB9 /* XCRemoteSwiftPackageReference "RxKeyboard" */,
 			);
 			productRefGroup = C168CEF325AC85C9008C1AFE /* Products */;
 			projectDirPath = "";
@@ -850,6 +875,7 @@
 				C1DDA3F925B1D74500FCFDD3 /* SelectBibleReadingViewController.storyboard in Resources */,
 				C1E7CB0525B5961200E14AB7 /* BibleReadingCell.xib in Resources */,
 				C12B917325B03DE400DD6FB1 /* BibleVerseCell.xib in Resources */,
+				C1E775FD25CE3CA100C2FCB9 /* PrayerCell.xib in Resources */,
 				C12069BF25C2E9D800C8A7B7 /* PrayerViewController.storyboard in Resources */,
 				C168CEFF25AC85CC008C1AFE /* Assets.xcassets in Resources */,
 				C1FB96B625BFACAF00D470A9 /* BibleFontViewController.storyboard in Resources */,
@@ -908,7 +934,9 @@
 				C101639525B0950F0079EB69 /* SelectingVerseBuilder.swift in Sources */,
 				C1682BAA25AF316F00E8564A /* CalendarInteractor.swift in Sources */,
 				C1DFDD7125BB2368004CD1E3 /* DayRouter.swift in Sources */,
+				C1E775FC25CE3CA100C2FCB9 /* PrayerCell.swift in Sources */,
 				C12069C225C2E9D800C8A7B7 /* PrayerInteractor.swift in Sources */,
+				C1A3331F25E0360B007D0807 /* UILabel + Ex.swift in Sources */,
 				C101639425B0950F0079EB69 /* SelectingVerseViewController.swift in Sources */,
 				C16BD1F925C486CC00C8139F /* VIPDetailViewController.swift in Sources */,
 				C1D02C8825AE74BF0001CF6C /* UIViewController + Ex.swift in Sources */,
@@ -1305,6 +1333,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C11FF95A25CC574100E347D7 /* XCRemoteSwiftPackageReference "RxGesture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxGesture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.3;
+			};
+		};
 		C12069E025C32F6900C8A7B7 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources";
@@ -1385,6 +1421,14 @@
 				minimumVersion = 1.6.1;
 			};
 		};
+		C1E775F325CD705700C2FCB9 /* XCRemoteSwiftPackageReference "RxKeyboard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxKeyboard";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		C1FB96A925BFAC4F00D470A9 /* XCRemoteSwiftPackageReference "PanModal" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/slackhq/PanModal";
@@ -1396,6 +1440,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C11FF95B25CC574100E347D7 /* RxGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C11FF95A25CC574100E347D7 /* XCRemoteSwiftPackageReference "RxGesture" */;
+			productName = RxGesture;
+		};
 		C12069E125C32F6A00C8A7B7 /* Differentiator */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C12069E025C32F6900C8A7B7 /* XCRemoteSwiftPackageReference "RxDataSources" */;
@@ -1455,6 +1504,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C1D02C3E25ADBB810001CF6C /* XCRemoteSwiftPackageReference "RxAppState" */;
 			productName = RxAppState;
+		};
+		C1E775F425CD705700C2FCB9 /* RxKeyboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1E775F325CD705700C2FCB9 /* XCRemoteSwiftPackageReference "RxKeyboard" */;
+			productName = RxKeyboard;
 		};
 		C1FB96AA25BFAC4F00D470A9 /* PanModal */ = {
 			isa = XCSwiftPackageProductDependency;

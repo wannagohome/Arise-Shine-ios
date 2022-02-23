@@ -74,8 +74,8 @@ final class PrayerInteractor:
             self.router?.attachNewVIP()
             return .empty()
             
-        case .add(let name):
-            let vip = VIP(name: name, description: "구현 예정")
+        case .add(let name, let desc):
+            let vip = VIP(name: name, description: desc)
             
             db.insert(vip: vip)
             return Observable.just(Mutation.setVIPs(db.selectAll()))
@@ -99,8 +99,9 @@ final class PrayerInteractor:
 }
 
 extension PrayerInteractor: PrayerInteractable {
-    func addNewVIP(of name: String) {
-        self.action.onNext(.add(name))
+    func addNewVIP(of name: String,
+                   description: String) {
+        self.action.onNext(.add(name, description))
     }
     
     func closeBibleNewVIP() {
