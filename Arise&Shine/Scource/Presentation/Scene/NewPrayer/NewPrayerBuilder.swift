@@ -15,7 +15,8 @@ final class NewPrayerComponent: Component<NewPrayerDependency> {}
 
 protocol NewPrayerBuildable: Buildable {
     func build(withListener listener: NewPrayerListener,
-               vip: VIP) -> NewPrayerRouting
+               vip: VIP,
+               prayer: Prayer?) -> NewPrayerRouting
 }
 
 final class NewPrayerBuilder:
@@ -27,11 +28,13 @@ final class NewPrayerBuilder:
     }
 
     func build(withListener listener: NewPrayerListener,
-               vip: VIP) -> NewPrayerRouting {
-        let component = NewPrayerComponent(dependency: dependency)
+               vip: VIP,
+               prayer: Prayer? = nil) -> NewPrayerRouting {
+        let _ = NewPrayerComponent(dependency: dependency)
         let viewController = NewPrayerViewController.initWithStoryBoard()
         let interactor = NewPrayerInteractor(presenter: viewController,
-                                             initialState: .init(currentVIP: vip))
+                                             initialState: .init(currentVIP: vip,
+                                                                 prayer: prayer))
         interactor.listener = listener
         return NewPrayerRouter(interactor: interactor, viewController: viewController)
     }

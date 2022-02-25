@@ -17,7 +17,7 @@ struct PrayerManager {
     private let createdAt = Expression<String?>("createdAt")
     private let contents = Expression<String?>("contents")
     private let vipID = Expression<Int?>("vipID")
-
+    
     
     init() {
         defer {
@@ -52,5 +52,14 @@ struct PrayerManager {
                        createdAt: $0[createdAt],
                        contents: $0[contents])
             }
+    }
+    
+    func updateContents(of prayer: Prayer) {
+        guard prayer.id != nil else { return }
+        let newPrayer = table.filter(id == prayer.id!)
+        
+        let _ = try? self.db.run(newPrayer.update(
+            contents <- prayer.contents
+        ))
     }
 }

@@ -35,8 +35,11 @@ final class VIPDetailRouter:
         interactor.router = self
     }
     
-    func attatchNewPrayer(with vip: VIP) {
-        let router = self.newPrayerBuilder.build(withListener: self.interactor, vip: vip)
+    func attatchNewPrayer(with vip: VIP,
+                          prayer: Prayer?) {
+        let router = self.newPrayerBuilder.build(withListener: self.interactor,
+                                                 vip: vip,
+                                                 prayer: prayer)
         self.newPrayerRouter = router
         self.attachChild(router)
         self.viewController.present(viewController: router.viewControllable)

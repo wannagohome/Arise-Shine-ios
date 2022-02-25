@@ -22,10 +22,12 @@ protocol NewPrayerPresentable: Presentable {
 protocol NewPrayerListener: class {
     func closeNewPrayer()
     func addNew(prayer: Prayer)
+    func edit(prayer: Prayer)
 }
 
 struct NewPrayerPresentableState {
     let currentVIP: VIP
+    var prayer: Prayer?
 }
 
 final class NewPrayerInteractor:
@@ -65,15 +67,26 @@ final class NewPrayerInteractor:
             return .empty()
             
         case .done(let contents):
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            let prayer = Prayer(
-                createdAt: dateFormatter.string(from: Date()),
-                contents: contents,
-                vipID: self.currentState.currentVIP.id
-            )
-            PrayerManager().insert(prayer: prayer)
-            self.listener?.addNew(prayer: prayer)
+            var prayer: Prayer
+            
+            if self.currentState.prayer == nil {
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                prayer = Prayer(
+                    createdAt: dateFormatter.string(from: Date()),
+                    contents: contents,
+                    vipID: self.currentState.currentVIP.id
+                )
+                PrayerManager().insert(prayer: prayer)
+                self.listener?.addNew(prayer: prayer)
+            } else {
+                prayer = self.currentState.prayer!
+                prayer.contents = contents
+                PrayerManager().updateContents(of: prayer)
+                self.listener?.edit(prayer: prayer)
+            }
+            
+            
             self.listener?.closeNewPrayer()
             return .empty()
         }
