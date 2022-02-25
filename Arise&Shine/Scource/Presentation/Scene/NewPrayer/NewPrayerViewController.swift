@@ -77,7 +77,12 @@ final class NewPrayerViewController:
         self.bindTapDone(to: listener)
     }
     
-    private func bindState(from listener: NewPrayerPresentableListener) {}
+    private func bindState(from listener: NewPrayerPresentableListener) {
+        listener.state.compactMap { $0.prayer?.contents }
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(self.textView.rx.text)
+            .disposed(by: self.disposeBag)
+    }
 }
 
 extension NewPrayerViewController {

@@ -10,7 +10,8 @@ import RxSwift
 import ReactorKit
 
 protocol VIPDetailRouting: ViewableRouting {
-    func attatchNewPrayer(with vip: VIP)
+    func attatchNewPrayer(with vip: VIP,
+                          prayer: Prayer?)
     func detatchNewPrayer()
 }
 
@@ -42,6 +43,8 @@ final class VIPDetailInteractor:
         case setPrayers([Prayer])
         case addPrayer(Prayer)
         case open(Prayer)
+        case delete(Prayer)
+        case edit(Prayer)
     }
     
     var initialState: State
@@ -73,7 +76,8 @@ final class VIPDetailInteractor:
             return Observable.just(Mutation.setPrayers(db.selectAll(of: id)))
             
         case .tapAdd:
-            self.router?.attatchNewPrayer(with: self.currentState.vip)
+            self.router?.attatchNewPrayer(with: self.currentState.vip,
+                                          prayer: nil)
             return .empty()
             
         case .add(let prayer):
@@ -85,6 +89,17 @@ final class VIPDetailInteractor:
             
         case .open(let prayer):
             return Observable.just(Mutation.open(prayer))
+            
+        case .delegatePrayer(let prayer):
+            return Observable.just(Mutation.delete(prayer))
+            
+        case .startEdit(let prayer):
+            self.router?.attatchNewPrayer(with: self.currentState.vip,
+                                          prayer: prayer)
+            return .empty()
+            
+        case .edit(let prayer):
+            return Observable.just(Mutation.edit(prayer))
         }
     }
     
@@ -99,10 +114,19 @@ final class VIPDetailInteractor:
             newSate.prayers.append(prayer)
             
         case .open(let prayer):
-            if let index = newSate.prayers.indexOf(prayer) {
+            if let index = newSate.prayers.index(of: prayer) {
                 newSate.prayers[index].isOpened = true
             }
             
+        case .delete(let prayer):
+            if let index = newSate.prayers.index(of: prayer) {
+                newSate.prayers.remove(at: index)
+            }
+            
+        case .edit(let prayer):
+            if let index = newSate.prayers.index(of: prayer) {
+                newSate.prayers[index].contents = prayer.contents
+            }
         }
         
         return newSate
@@ -111,6 +135,10 @@ final class VIPDetailInteractor:
 
 
 extension VIPDetailInteractor: VIPDetailInteractable {
+    func edit(prayer: Prayer) {
+        self.action.onNext(.edit(prayer))
+    }
+    
     func closeNewPrayer() {
         self.router?.detatchNewPrayer()
     }
@@ -118,14 +146,4 @@ extension VIPDetailInteractor: VIPDetailInteractable {
     func addNew(prayer: Prayer) {
         self.action.onNext(.add(prayer))
     }   
-}
-
-
-extension Array where Element: Equatable {
-    func indexOf(_ compare: Element) -> Int? {
-        for (index, item) in self.enumerated() {
-            if item == compare { return index }
-        }
-        return nil
-    }
 }

@@ -17,6 +17,9 @@ enum VIPDetailPresentableAction {
     case tapAdd
     case add(Prayer)
     case open(Prayer)
+    case delegatePrayer(Prayer)
+    case startEdit(Prayer)
+    case edit(Prayer)
 }
 
 protocol VIPDetailPresentableListener: class {
@@ -53,6 +56,7 @@ final class VIPDetailViewController:
                                 forCellReuseIdentifier: PrayerCell.description())
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 70
+        self.tableView.delegate = self
     }
     
     // MARK: - Private methods
@@ -149,8 +153,30 @@ extension VIPDetailViewController {
     }
 }
 
+extension VIPDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let cell = cell as? PrayerCell {
+            cell.removeOptionView()
+        }
+    }
+}
+
 extension VIPDetailViewController: PrayerDelegate {
-    func open(_ prayer: Prayer) {
+    func prayerShouldDelete(prayer: Prayer) {
+        self.listener?.action.onNext(.delegatePrayer(prayer))
+    }
+    
+    func prayerShouldStartEdit(prayer: Prayer) {
+        self.listener?.action.onNext(.startEdit(prayer))
+    }
+    
+    func prayerShouldOpen(_ prayer: Prayer) {
         self.listener?.action.onNext(.open(prayer))
+    }
+    
+    func optionShouldShow(in prayerID: Int) {
+        self.tableView.visibleCells
+            .map { $0 as? PrayerCell }
+            .forEach { $0?.removeOptionView() }
     }
 }

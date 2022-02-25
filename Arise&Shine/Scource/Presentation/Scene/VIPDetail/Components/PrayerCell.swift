@@ -24,6 +24,7 @@ class PrayerCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var openButton: UIButton!
     @IBOutlet weak var optionButton: UIButton!
+    private var optionView: PrayerOptionView?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,20 +40,45 @@ class PrayerCell: UITableViewCell {
         self.openButton.isHidden = !(self.label.totalNumberOfLines > 3 && !(prayer.isOpened))
     }
     
+    func removeOptionView() {
+        self.optionView?.removeFromSuperview()
+    }
+    
     @IBAction func tapOpen(_ sender: Any) {
         if let prayer = self.prayer {
-            self.delegate?.open(prayer)
+            self.delegate?.prayerShouldOpen(prayer)
         }
     }
     
     @IBAction func tapOption(_ sender: Any) {
-        let view = UIView(frame: CGRect(x: self.optionButton.frame.maxX - 110, y: self.optionButton.frame.minY + 5, width: 100, height: 50))
-        view.layer.borderWidth = 1
-        view.backgroundColor = .white
-        self.contentView.addSubview(view)
+        guard let prayer = self.prayer,
+              let id = prayer.id else { return }
+        
+        defer {
+            self.optionView?.delegate = self
+            self.delegate?.optionShouldShow(in: id)
+            if let view = self.optionView {
+                self.contentView.addSubview(view)
+            }
+        }
+        
+        self.optionView = PrayerOptionView(
+            prayer: prayer,
+            frame: CGRect(x: self.optionButton.frame.maxX - 90,
+                          y: self.optionButton.frame.minY + 5,
+                          width: 70, height: 50)
+        )
     }
 }
 
+extension PrayerCell: PrayerOptionViewDelegate {
+    func delete(prayer: Prayer) { self.delegate?.prayerShouldDelete(prayer: prayer) }
+    func edit(prayer: Prayer) { self.delegate?.prayerShouldStartEdit(prayer: prayer) }
+}
+
 protocol PrayerDelegate: class {
-    func open(_ prayer: Prayer)
+    func prayerShouldOpen(_ prayer: Prayer)
+    func optionShouldShow(in prayerID: Int)
+    func prayerShouldDelete(prayer: Prayer)
+    func prayerShouldStartEdit(prayer: Prayer)
 }

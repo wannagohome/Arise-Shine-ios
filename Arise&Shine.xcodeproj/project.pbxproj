@@ -30,6 +30,8 @@
 		C12B917225B03DE400DD6FB1 /* BibleVerseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12B917025B03DE400DD6FB1 /* BibleVerseCell.swift */; };
 		C12B917325B03DE400DD6FB1 /* BibleVerseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C12B917125B03DE400DD6FB1 /* BibleVerseCell.xib */; };
 		C12B917925B04A1300DD6FB1 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = C12B917825B04A1300DD6FB1 /* Then */; };
+		C15CF17125E5309D00C3AC6E /* Array + Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15CF17025E5309D00C3AC6E /* Array + Ex.swift */; };
+		C15DF10025E40DE700D447FC /* PrayerOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15DF0FF25E40DE700D447FC /* PrayerOptionView.swift */; };
 		C1682BA625AF316F00E8564A /* CalendarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1682BA125AF316F00E8564A /* CalendarRouter.swift */; };
 		C1682BA725AF316F00E8564A /* CalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1682BA225AF316F00E8564A /* CalendarViewController.storyboard */; };
 		C1682BA825AF316F00E8564A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1682BA325AF316F00E8564A /* CalendarViewController.swift */; };
@@ -169,6 +171,8 @@
 		C12B916325B0340800DD6FB1 /* SettingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInteractor.swift; sourceTree = "<group>"; };
 		C12B917025B03DE400DD6FB1 /* BibleVerseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleVerseCell.swift; sourceTree = "<group>"; };
 		C12B917125B03DE400DD6FB1 /* BibleVerseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BibleVerseCell.xib; sourceTree = "<group>"; };
+		C15CF17025E5309D00C3AC6E /* Array + Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + Ex.swift"; sourceTree = "<group>"; };
+		C15DF0FF25E40DE700D447FC /* PrayerOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerOptionView.swift; sourceTree = "<group>"; };
 		C1682BA125AF316F00E8564A /* CalendarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarRouter.swift; sourceTree = "<group>"; };
 		C1682BA225AF316F00E8564A /* CalendarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarViewController.storyboard; sourceTree = "<group>"; };
 		C1682BA325AF316F00E8564A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -543,6 +547,7 @@
 				C1103AB925BDA111002AEABA /* UITabBarController + Ex.swift */,
 				C1BE039825C07F4600D028E7 /* UserDefaults + Ex.swift */,
 				C1A3331E25E0360B007D0807 /* UILabel + Ex.swift */,
+				C15CF17025E5309D00C3AC6E /* Array + Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -705,6 +710,7 @@
 			children = (
 				C1E775FA25CE3CA100C2FCB9 /* PrayerCell.swift */,
 				C1E775FB25CE3CA100C2FCB9 /* PrayerCell.xib */,
+				C15DF0FF25E40DE700D447FC /* PrayerOptionView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -967,6 +973,7 @@
 				C16BD20625C49DAE00C8139F /* Prayer.swift in Sources */,
 				C16BD22725C5170D00C8139F /* NewPrayerBuilder.swift in Sources */,
 				C16BD1C025C4674B00C8139F /* NewVIPInteractor.swift in Sources */,
+				C15CF17125E5309D00C3AC6E /* Array + Ex.swift in Sources */,
 				C16BD22625C5170D00C8139F /* NewPrayerViewController.swift in Sources */,
 				C16BD1BF25C4674B00C8139F /* NewVIPBuilder.swift in Sources */,
 				C1D02CD025AEC1770001CF6C /* BibleChapter.swift in Sources */,
@@ -981,6 +988,7 @@
 				C1DDA40725B295A400FCFDD3 /* BibleReadingSchedule.swift in Sources */,
 				C1682BBC25AF379800E8564A /* MonthBuilder.swift in Sources */,
 				C1682BA625AF316F00E8564A /* CalendarRouter.swift in Sources */,
+				C15DF10025E40DE700D447FC /* PrayerOptionView.swift in Sources */,
 				C168CEF625AC85C9008C1AFE /* AppDelegate.swift in Sources */,
 				C12B917225B03DE400DD6FB1 /* BibleVerseCell.swift in Sources */,
 				C168CEF825AC85C9008C1AFE /* SceneDelegate.swift in Sources */,
