@@ -11,7 +11,7 @@ final class PrayerOptionView: UIView {
     
     // MARK: - Properties
     
-    private let prayer: Prayer
+    let prayer: Prayer
     weak var delegate: PrayerOptionViewDelegate?
     
     // MARK: - Views

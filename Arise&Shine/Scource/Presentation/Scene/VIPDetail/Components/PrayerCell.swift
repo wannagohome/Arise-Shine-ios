@@ -52,7 +52,8 @@ class PrayerCell: UITableViewCell {
     
     @IBAction func tapOption(_ sender: Any) {
         guard let prayer = self.prayer,
-              let id = prayer.id else { return }
+              let id = prayer.id,
+              self.optionView?.prayer != prayer else { return }
         
         defer {
             self.optionView?.delegate = self
