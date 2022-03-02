@@ -12,4 +12,11 @@ extension Array where Element: Equatable {
         }
         return nil
     }
+    
+    mutating func remove(_ item: Element) -> Array<Element> {
+         if let index = self.index(of: item) {
+            self.remove(at: index)
+        }
+        return self
+    }
 }

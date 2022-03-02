@@ -42,6 +42,7 @@ class PrayerCell: UITableViewCell {
     
     func removeOptionView() {
         self.optionView?.removeFromSuperview()
+        self.optionView = nil
     }
     
     @IBAction func tapOpen(_ sender: Any) {
@@ -52,12 +53,16 @@ class PrayerCell: UITableViewCell {
     
     @IBAction func tapOption(_ sender: Any) {
         guard let prayer = self.prayer,
-              let id = prayer.id,
               self.optionView?.prayer != prayer else { return }
+        
+        guard self.optionView == nil else {
+            self.removeOptionView()
+            return
+        }
         
         defer {
             self.optionView?.delegate = self
-            self.delegate?.optionShouldShow(in: id)
+            self.delegate?.optionShouldShow(self, in: prayer)
             if let view = self.optionView {
                 self.contentView.addSubview(view)
             }
@@ -79,7 +84,7 @@ extension PrayerCell: PrayerOptionViewDelegate {
 
 protocol PrayerDelegate: class {
     func prayerShouldOpen(_ prayer: Prayer)
-    func optionShouldShow(in prayerID: Int)
+    func optionShouldShow(_ cell: PrayerCell, in prayer: Prayer)
     func prayerShouldDelete(prayer: Prayer)
     func prayerShouldStartEdit(prayer: Prayer)
 }
