@@ -174,9 +174,10 @@ extension VIPDetailViewController: PrayerDelegate {
         self.listener?.action.onNext(.open(prayer))
     }
     
-    func optionShouldShow(in prayerID: Int) {
+    func optionShouldShow(_ cell: PrayerCell, in prayer: Prayer) {
         self.tableView.visibleCells
-            .map { $0 as? PrayerCell }
-            .forEach { $0?.removeOptionView() }
+            .filter { $0 != cell }
+            .compactMap { $0 as? PrayerCell }
+            .forEach { $0.removeOptionView() }
     }
 }
