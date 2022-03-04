@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/ReactorKit/ReactorKit",
         "state": {
           "branch": null,
-          "revision": "fc392a1dc4c98a496089b8bd091cd92f608fd299",
-          "version": "2.1.1"
+          "revision": "a16e349e93d8b4c3e6c8fd210b43660dbd7016cc",
+          "version": "3.0.0"
         }
       },
       {
@@ -33,7 +33,7 @@
         "repositoryURL": "https://github.com/uber/RIBs",
         "state": {
           "branch": "master",
-          "revision": "ffc489f00db785c8c0051678393f7aba0d52f1a4",
+          "revision": "607af82577dc06bbefd05c2cb47264684dd672bb",
           "version": null
         }
       },
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/pixeldock/RxAppState",
         "state": {
           "branch": null,
-          "revision": "82ff34635c49162db9ae0e9fd9176428cd062078",
-          "version": "1.6.1"
+          "revision": "7a3a6768b30baea3f5ec903f40f6d393010bc223",
+          "version": "1.7.0"
         }
       },
       {
@@ -51,17 +51,8 @@
         "repositoryURL": "https://github.com/RxSwiftCommunity/RxDataSources",
         "state": {
           "branch": null,
-          "revision": "a18cee01c9ee55f04d0c7eb15c77a96c3648c88e",
-          "version": "4.0.1"
-        }
-      },
-      {
-        "package": "RxExpect",
-        "repositoryURL": "https://github.com/devxoul/RxExpect.git",
-        "state": {
-          "branch": null,
-          "revision": "c3a3bb3d46ee831582c6619ecc48cda1cdbff890",
-          "version": "2.0.0"
+          "revision": "e4627ac4f5a8dc10719030561801825c443acfec",
+          "version": "5.0.1"
         }
       },
       {
@@ -69,8 +60,8 @@
         "repositoryURL": "https://github.com/RxSwiftCommunity/RxGesture",
         "state": {
           "branch": null,
-          "revision": "867f176b6695829e350fafc00b5a849bb46a1857",
-          "version": "3.0.3"
+          "revision": "e29e65a58c2f670677d17df9a18e846b87e78592",
+          "version": "4.0.2"
         }
       },
       {
@@ -78,8 +69,8 @@
         "repositoryURL": "https://github.com/RxSwiftCommunity/RxKeyboard",
         "state": {
           "branch": null,
-          "revision": "ed5940a7e29c3a4b4925b2d76260f793d311d58e",
-          "version": "1.0.0"
+          "revision": "085fd99d7bb4f98e671904fcfe7ff561e66574ad",
+          "version": "2.0.0"
         }
       },
       {
@@ -87,8 +78,8 @@
         "repositoryURL": "https://github.com/ReactiveX/RxSwift",
         "state": {
           "branch": null,
-          "revision": "002d325b0bdee94e7882e1114af5ff4fe1e96afa",
-          "version": "5.1.1"
+          "revision": "7e01c05f25c025143073eaa3be3532f9375c614b",
+          "version": "6.1.0"
         }
       },
       {
