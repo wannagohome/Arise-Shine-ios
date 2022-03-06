@@ -20,7 +20,7 @@ protocol SelectBibleReadingPresentable: Presentable {
     var listener: SelectBibleReadingPresentableListener? { get set }
 }
 
-protocol SelectBibleReadingListener: class {
+protocol SelectBibleReadingListener: AnyObject {
     func popBibleReading()
 }
 

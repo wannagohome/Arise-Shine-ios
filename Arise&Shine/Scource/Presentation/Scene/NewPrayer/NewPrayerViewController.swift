@@ -16,7 +16,7 @@ enum NewPrayerPresentableAction {
     case close
 }
 
-protocol NewPrayerPresentableListener: class {
+protocol NewPrayerPresentableListener: AnyObject {
     var action: ActionSubject<NewPrayerPresentableAction> { get }
     var state: Observable<NewPrayerPresentableState> { get }
     var currentState: NewPrayerPresentableState { get }

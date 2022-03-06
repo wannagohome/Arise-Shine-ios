@@ -22,7 +22,7 @@ enum VIPDetailPresentableAction {
     case edit(Prayer)
 }
 
-protocol VIPDetailPresentableListener: class {
+protocol VIPDetailPresentableListener: AnyObject {
     var action: ActionSubject<VIPDetailPresentableAction> { get }
     var state: Observable<VIPDetailPresentableState> { get }
     var currentState: VIPDetailPresentableState { get }

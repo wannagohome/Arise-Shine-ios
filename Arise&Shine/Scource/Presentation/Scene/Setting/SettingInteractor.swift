@@ -19,7 +19,7 @@ protocol SettingPresentable: Presentable {
     var listener: SettingPresentableListener? { get set }
 }
 
-protocol SettingListener: class {}
+protocol SettingListener: AnyObject {}
 
 struct SettingPresentableState {
     let tableItems: [String] = ["통독 계획", "내 메모", "라이센스", "앱 버전"]

@@ -9,7 +9,7 @@ import RIBs
 import RxSwift
 import UIKit
 
-protocol SelectingVersePresentableListener: class {
+protocol SelectingVersePresentableListener: AnyObject {
     func cancleSelecting()
 }
 

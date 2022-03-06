@@ -17,7 +17,7 @@ enum BibleFontPresentableAction {
     case close
 }
 
-protocol BibleFontPresentableListener: class {
+protocol BibleFontPresentableListener: AnyObject {
     var action: ActionSubject<BibleFontPresentableAction> { get }
     var state: Observable<BibleFontPresentableState> { get }
     var currentState: BibleFontPresentableState { get }

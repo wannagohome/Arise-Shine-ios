@@ -19,7 +19,7 @@ enum NewVIPPresentableAction {
     case done
 }
 
-protocol NewVIPPresentableListener: class {
+protocol NewVIPPresentableListener: AnyObject {
     var action: ActionSubject<NewVIPPresentableAction> { get }
     var state: Observable<NewVIPPresentableState> { get }
     var currentState: NewVIPPresentableState { get }
