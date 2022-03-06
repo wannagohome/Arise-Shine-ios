@@ -23,7 +23,7 @@ protocol BiblePresentable: Presentable {
     var listener: BiblePresentableListener? { get set }
 }
 
-protocol BibleListener: class {}
+protocol BibleListener: AnyObject {}
 
 final class BibleInteractor:
     PresentableInteractor<BiblePresentable>,

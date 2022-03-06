@@ -13,7 +13,7 @@ import UIKit
 
 enum SettingPresentableAction {}
 
-protocol SettingPresentableListener: class {
+protocol SettingPresentableListener: AnyObject {
     var action: ActionSubject<SettingPresentableAction> { get }
     var state: Observable<SettingPresentableState> { get }
     var currentState: SettingPresentableState { get }

@@ -18,7 +18,7 @@ protocol NewVIPPresentable: Presentable {
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol NewVIPListener: class {
+protocol NewVIPListener: AnyObject {
     func addNewVIP(of name: String,
                    description: String)
     func closeBibleNewVIP()

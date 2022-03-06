@@ -16,7 +16,7 @@ enum SelectBibleReadingPresentableAction {
     case pop
 }
 
-protocol SelectBibleReadingPresentableListener: class {
+protocol SelectBibleReadingPresentableListener: AnyObject {
     var action: ActionSubject<SelectBibleReadingPresentableAction> { get }
     var state: Observable<SelectBibleReadingPresentableState> { get }
     var currentState: SelectBibleReadingPresentableState { get }

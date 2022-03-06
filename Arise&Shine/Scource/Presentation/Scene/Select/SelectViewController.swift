@@ -17,7 +17,7 @@ enum SelectPresentableAction {
     case close
 }
 
-protocol SelectPresentableListener: class {
+protocol SelectPresentableListener: AnyObject {
     var currentChapter: BibleChapter { get }
     var action: ActionSubject<SelectPresentableAction> { get }
     var state: Observable<SelectPresentableState> { get }
