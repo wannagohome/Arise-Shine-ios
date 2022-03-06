@@ -19,7 +19,7 @@ protocol NewPrayerPresentable: Presentable {
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol NewPrayerListener: class {
+protocol NewPrayerListener: AnyObject {
     func closeNewPrayer()
     func addNew(prayer: Prayer)
     func edit(prayer: Prayer)

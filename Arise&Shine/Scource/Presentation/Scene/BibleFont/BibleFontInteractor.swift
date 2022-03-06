@@ -15,7 +15,7 @@ protocol BibleFontPresentable: Presentable {
     var listener: BibleFontPresentableListener? { get set }
 }
 
-protocol BibleFontListener: class {
+protocol BibleFontListener: AnyObject {
     func sizeUp()
     func sizeDown()
     func closeBibleFont()

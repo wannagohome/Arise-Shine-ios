@@ -20,7 +20,7 @@ protocol VIPDetailPresentable: Presentable {
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol VIPDetailListener: class {
+protocol VIPDetailListener: AnyObject {
     func closeVIPDetail()
 }
 

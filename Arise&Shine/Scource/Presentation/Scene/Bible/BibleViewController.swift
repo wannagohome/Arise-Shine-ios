@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import RxAppState
 import PanModal
+import SnapKit
 
 import UIKit
 
@@ -24,7 +25,7 @@ enum BiblePresentableAction {
     case fonSizeDown
 }
 
-protocol BiblePresentableListener: class {
+protocol BiblePresentableListener: AnyObject {
     var action: ActionSubject<BiblePresentableAction> { get }
     var state: Observable<BiblePresentableState> { get }
     var currentState: BiblePresentableState { get }
@@ -84,7 +85,6 @@ final class BibleViewController:
     
     private func setNavBarItem() {
         self.navigationItem.titleView = self.titleButton
-        
     }
     
     private func bind(listener: BiblePresentableListener?) {

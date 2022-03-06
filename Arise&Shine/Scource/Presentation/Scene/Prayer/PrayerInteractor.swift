@@ -22,7 +22,7 @@ protocol PrayerPresentable: Presentable {
     var listener: PrayerPresentableListener? { get set }
 }
 
-protocol PrayerListener: class {}
+protocol PrayerListener: AnyObject {}
 
 struct PrayerPresentableState {
     var vips: [VIP] = [VIP(id: -1, name: "dummy", description: "dummy")]

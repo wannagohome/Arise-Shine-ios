@@ -14,7 +14,7 @@ protocol MainTabBarPresentable: Presentable {
     var listener: MainTabBarPresentableListener? { get set }
 }
 
-protocol MainTabBarListener: class {}
+protocol MainTabBarListener: AnyObject {}
 
 final class MainTabBarInteractor:
     PresentableInteractor<MainTabBarPresentable>,

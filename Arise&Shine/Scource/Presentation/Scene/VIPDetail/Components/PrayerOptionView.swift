@@ -67,7 +67,7 @@ final class PrayerOptionView: UIView {
 }
 
 
-protocol PrayerOptionViewDelegate: class {
+protocol PrayerOptionViewDelegate: AnyObject {
     func delete(prayer: Prayer)
     func edit(prayer: Prayer)
 }

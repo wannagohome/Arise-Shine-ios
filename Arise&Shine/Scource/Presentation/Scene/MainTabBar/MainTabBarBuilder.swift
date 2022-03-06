@@ -15,18 +15,18 @@ protocol MainTabBarDependency: Dependency {
 final class MainTabBarComponent:
     Component<MainTabBarDependency>,
     BibleDependency,
-    CalendarDependency,
+    BibleReadingDependency,
     PrayerDependency,
     SettingDependency {
     
     var bibleViewController: BiblePresentable & BibleViewControllable
-    var calendarViewController: CalendarPresentable & CalendarViewControllable
+    var bibleReadingViewController: BibleReadingPresentable & BibleReadingViewControllable
     var prayerViewController: PrayerPresentable & PrayerViewControllable
     var settingViewController: SettingPresentable & SettingViewControllable
     
     override init(dependency: MainTabBarDependency) {
         self.bibleViewController = BibleViewController.initWithStoryBoard()
-        self.calendarViewController = CalendarViewController.initWithStoryBoard()
+        self.bibleReadingViewController = BibleReadingViewController.initWithStoryBoard()
         self.prayerViewController = PrayerViewController.initWithStoryBoard()
         self.settingViewController = SettingViewController.initWithStoryBoard()
         super.init(dependency: dependency)
@@ -52,7 +52,7 @@ final class MainTabBarBuilder:
         
         let viewControllers = [
             component.bibleViewController,
-            component.calendarViewController,
+            component.bibleReadingViewController,
             component.prayerViewController,
             component.settingViewController
         ].map { UINavigationController(root: $0) }
@@ -63,14 +63,14 @@ final class MainTabBarBuilder:
         interactor.listener = listener
         
         let bibleBuilder = BibleBuilder(dependency: component)
-        let calendarBuilder = CalendarBuilder(dependency: component)
+        let bibleReadingBuilder = BibleReadingBuilder(dependency: component)
         let prayerBuiler = PrayerBuilder(dependency: component)
         let settingBuilder = SettingBuilder(dependency: component)
         
         return MainTabBarRouter(interactor: interactor,
                                 viewController: viewController,
                                 bibleBuilder: bibleBuilder,
-                                calendarBuilder: calendarBuilder,
+                                bibleReadingBuilder: bibleReadingBuilder,
                                 prayerBuilder: prayerBuiler,
                                 settingBuilder: settingBuilder)
     }

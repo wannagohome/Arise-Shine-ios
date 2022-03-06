@@ -82,7 +82,7 @@ extension PrayerCell: PrayerOptionViewDelegate {
     func edit(prayer: Prayer) { self.delegate?.prayerShouldStartEdit(prayer: prayer) }
 }
 
-protocol PrayerDelegate: class {
+protocol PrayerDelegate: AnyObject {
     func prayerShouldOpen(_ prayer: Prayer)
     func optionShouldShow(_ cell: PrayerCell, in prayer: Prayer)
     func prayerShouldDelete(prayer: Prayer)

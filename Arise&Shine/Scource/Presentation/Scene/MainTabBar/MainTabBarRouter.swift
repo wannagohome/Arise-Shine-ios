@@ -10,7 +10,7 @@ import RIBs
 protocol MainTabBarInteractable:
     Interactable,
     BibleListener,
-    CalendarListener,
+    BibleReadingListener,
     PrayerListener,
     SettingListener {
     
@@ -29,8 +29,8 @@ final class MainTabBarRouter:
     private let bibleBuilder: BibleBuildable
     private var bibleRouter: BibleRouting?
     
-    private let calendarBuilder: CalendarBuildable
-    private var calendarRouter: CalendarRouting?
+    private let bibleReadingBuilder: BibleReadingBuildable
+    private var bibleReadingRouter: BibleReadingRouting?
     
     private let prayerBuilder: PrayerBuildable
     private var prayerRouter: PrayerRouting?
@@ -43,12 +43,12 @@ final class MainTabBarRouter:
     init(interactor: MainTabBarInteractable,
          viewController: MainTabBarViewControllable,
          bibleBuilder: BibleBuildable,
-         calendarBuilder: CalendarBuildable,
+         bibleReadingBuilder: BibleReadingBuildable,
          prayerBuilder: PrayerBuildable,
          settingBuilder: SettingBuildable) {
         
         self.bibleBuilder = bibleBuilder
-        self.calendarBuilder = calendarBuilder
+        self.bibleReadingBuilder = bibleReadingBuilder
         self.prayerBuilder = prayerBuilder
         self.settingBuilder = settingBuilder
         super.init(interactor: interactor, viewController: viewController)
@@ -74,9 +74,9 @@ final class MainTabBarRouter:
     }
     
     private func attatchCalendar() {
-        let calendarRouter = self.calendarBuilder.build(withListener: self.interactor)
-        self.calendarRouter = calendarRouter
-        self.attachChild(calendarRouter)
+        let bibleReadingRouter = self.bibleReadingBuilder.build(withListener: self.interactor)
+        self.bibleReadingRouter = bibleReadingRouter
+        self.attachChild(bibleReadingRouter)
     }
     
     private func attatchPrayer() {
