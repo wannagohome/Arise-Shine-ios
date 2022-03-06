@@ -16,7 +16,7 @@ protocol SelectPresentable: Presentable {
     var listener: SelectPresentableListener? { get set }
 }
 
-protocol SelectListener: class {
+protocol SelectListener: AnyObject {
     func select(chapter: BibleChapter)
     func closeBibleSelect()
 }

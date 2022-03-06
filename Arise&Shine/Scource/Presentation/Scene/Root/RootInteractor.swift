@@ -16,7 +16,7 @@ protocol RootPresentable: Presentable {
     var listener: RootPresentableListener? { get set }
 }
 
-protocol RootListener: class {}
+protocol RootListener: AnyObject {}
 
 final class RootInteractor:
     PresentableInteractor<RootPresentable>,

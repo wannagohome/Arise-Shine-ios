@@ -14,7 +14,7 @@ protocol SelectingVersePresentable: Presentable {
     var listener: SelectingVersePresentableListener? { get set }
 }
 
-protocol SelectingVerseListener: class {
+protocol SelectingVerseListener: AnyObject {
     func cancleSelecting()
 }
 

@@ -9,7 +9,7 @@ import RIBs
 import RxSwift
 import UIKit
 
-protocol RootPresentableListener: class {}
+protocol RootPresentableListener: AnyObject {}
 
 final class RootViewController:
     UIViewController,

@@ -9,7 +9,7 @@ import RIBs
 import RxSwift
 import UIKit
 
-protocol MainTabBarPresentableListener: class {}
+protocol MainTabBarPresentableListener: AnyObject {}
 
 final class MainTabBarViewController:
     UITabBarController,

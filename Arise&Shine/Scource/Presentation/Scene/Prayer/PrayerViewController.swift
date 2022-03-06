@@ -19,7 +19,7 @@ enum PrayerPresentableAction {
     case selectTable(VIP)
 }
 
-protocol PrayerPresentableListener: class {
+protocol PrayerPresentableListener: AnyObject {
     var action: ActionSubject<PrayerPresentableAction> { get }
     var state: Observable<PrayerPresentableState> { get }
     var currentState: PrayerPresentableState { get }
