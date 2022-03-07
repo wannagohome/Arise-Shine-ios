@@ -22,7 +22,9 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
         self.attribute()
+        self.layout()
     }
     
     // MARK: - Initialization & Deinitialization
@@ -31,6 +33,7 @@ class BaseViewController: UIViewController {
         self.initialize()
     }
     
-    func initialize() {}
-    func attribute() {}
+    @objc func initialize() {}
+    @objc func attribute() {}
+    func layout() {}
 }
