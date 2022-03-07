@@ -21,8 +21,11 @@ protocol BibleReadingListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
-final class BibleReadingInteractor: PresentableInteractor<BibleReadingPresentable>, BibleReadingInteractable, BibleReadingPresentableListener {
-
+final class BibleReadingInteractor:
+    PresentableInteractor<BibleReadingPresentable>,
+    BibleReadingInteractable,
+    BibleReadingPresentableListener {
+    
     weak var router: BibleReadingRouting?
     weak var listener: BibleReadingListener?
 
