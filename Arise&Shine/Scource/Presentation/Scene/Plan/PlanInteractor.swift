@@ -7,9 +7,11 @@
 
 import RIBs
 import RxSwift
+import ReactorKit
 
 protocol PlanRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func attatchPlanDetail()
+    func detachPlanDeatil()
 }
 
 protocol PlanPresentable: Presentable {
@@ -21,28 +23,43 @@ protocol PlanListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
+struct PlanPresentableState {
+    
+}
+
 final class PlanInteractor:
     PresentableInteractor<PlanPresentable>,
-    PlanInteractable,
-    PlanPresentableListener {
+    PlanPresentableListener,
+    Reactor {
     
+    //MARK: - Reactor
+    typealias Action = PlanPresentableAction
+    typealias State = PlanPresentableState
+    var initialState = State()
+    enum Mutaion {}
+    
+    //MARK: - Properties
     weak var router: PlanRouting?
     weak var listener: PlanListener?
 
-    // TODO: Add additional dependencies to constructor. Do not perform any logic
-    // in constructor.
+    // MARK: - Initialization
     override init(presenter: PlanPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }
 
-    override func didBecomeActive() {
-        super.didBecomeActive()
-        // TODO: Implement business logic here.
+    //MARK: - Reactor
+    func mutate(action: Action) -> Observable<Action> {
+        switch action {
+        case .selectProgressingPlan:
+            self.router?.attatchPlanDetail()
+            return .empty()
+        }
     }
+}
 
-    override func willResignActive() {
-        super.willResignActive()
-        // TODO: Pause any business logic.
+extension PlanInteractor: PlanInteractable {
+    func popPlanDetail() {
+        self.router?.detachPlanDeatil()
     }
 }

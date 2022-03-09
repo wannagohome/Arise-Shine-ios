@@ -37,24 +37,19 @@ final class PrayerInteractor:
     Reactor {
     
     // MARK: - Reactor
-    
     typealias Action = PrayerPresentableAction
     typealias State = PrayerPresentableState
-    
+    var initialState: State
     enum Mutation {
         case setVIPs([VIP])
     }
     
-    var initialState: State
-    
     // MARK: - Properties
-
     weak var router: PrayerRouting?
     weak var listener: PrayerListener?
     private let db = VIPManager()
     
     // MARK: - Initialization
-    
     init(presenter: PrayerPresentable,
          initialState: State) {
         

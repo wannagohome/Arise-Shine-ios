@@ -11,7 +11,9 @@ protocol PlanDependency: Dependency {
     var planViewController: PlanPresentable & PlanViewControllable { get }
 }
 
-final class PlanComponent: Component<PlanDependency> {
+final class PlanComponent:
+    Component<PlanDependency>,
+    PlanDetailDependency {
 
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
@@ -33,6 +35,12 @@ final class PlanBuilder: Builder<PlanDependency>, PlanBuildable {
         let viewController = component.dependency.planViewController
         let interactor = PlanInteractor(presenter: viewController)
         interactor.listener = listener
-        return PlanRouter(interactor: interactor, viewController: viewController)
+        
+        let planDetailBuilder = PlanDetailBuilder(dependency: component)
+        return PlanRouter(
+            interactor: interactor,
+            viewController: viewController,
+            planDetailBuilder: planDetailBuilder
+        )
     }
 }

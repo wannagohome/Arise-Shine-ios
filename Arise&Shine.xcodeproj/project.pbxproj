@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B31CC422697D041002DD687 /* PlanDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31CC412697D041002DD687 /* PlanDateCell.swift */; };
+		0B31CC48269802D4002DD687 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31CC47269802D4002DD687 /* CircleView.swift */; };
+		0B31CC4A26981304002DD687 /* CALayer + Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31CC4926981304002DD687 /* CALayer + Ex.swift */; };
+		0B31CC50269817FF002DD687 /* PlanDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31CC4C269817FF002DD687 /* PlanDetailRouter.swift */; };
+		0B31CC51269817FF002DD687 /* PlanDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31CC4D269817FF002DD687 /* PlanDetailViewController.swift */; };
+		0B31CC52269817FF002DD687 /* PlanDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31CC4E269817FF002DD687 /* PlanDetailBuilder.swift */; };
+		0B31CC53269817FF002DD687 /* PlanDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31CC4F269817FF002DD687 /* PlanDetailInteractor.swift */; };
+		0B31CC5526981874002DD687 /* PlanDetailViewController + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31CC5426981874002DD687 /* PlanDetailViewController + UI.swift */; };
+		0B31CC582698496B002DD687 /* PlanPresetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31CC572698496B002DD687 /* PlanPresetCell.swift */; };
 		0B330938262539690063BD46 /* PlanRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B330933262539680063BD46 /* PlanRouter.swift */; };
 		0B33093A262539690063BD46 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B330935262539680063BD46 /* PlanViewController.swift */; };
 		0B33093B262539690063BD46 /* PlanBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B330936262539680063BD46 /* PlanBuilder.swift */; };
 		0B33093C262539690063BD46 /* PlanInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B330937262539680063BD46 /* PlanInteractor.swift */; };
-		0BB3DCEE26948F260099F773 /* FindingReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB3DCED26948F260099F773 /* FindingReadCell.swift */; };
+		0BB3DCEE26948F260099F773 /* PlanListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB3DCED26948F260099F773 /* PlanListCell.swift */; };
 		0BB3DCF026948F360099F773 /* InProgressReadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB3DCEF26948F360099F773 /* InProgressReadingCell.swift */; };
 		0BB3DCF22694A3C90099F773 /* MyPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB3DCF12694A3C90099F773 /* MyPlanCell.swift */; };
-		0BB3DCF42694C3970099F773 /* Plan+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB3DCF32694C3970099F773 /* Plan+UI.swift */; };
+		0BB3DCF42694C3970099F773 /* PlanViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB3DCF32694C3970099F773 /* PlanViewController+UI.swift */; };
 		C101639325B0950F0079EB69 /* SelectingVerseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C101638E25B0950F0079EB69 /* SelectingVerseRouter.swift */; };
 		C101639425B0950F0079EB69 /* SelectingVerseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C101638F25B0950F0079EB69 /* SelectingVerseViewController.swift */; };
 		C101639525B0950F0079EB69 /* SelectingVerseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C101639025B0950F0079EB69 /* SelectingVerseBuilder.swift */; };
@@ -118,7 +127,7 @@
 		C1E775FC25CE3CA100C2FCB9 /* PrayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E775FA25CE3CA100C2FCB9 /* PrayerCell.swift */; };
 		C1E775FD25CE3CA100C2FCB9 /* PrayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E775FB25CE3CA100C2FCB9 /* PrayerCell.xib */; };
 		C1E7CB0425B5961200E14AB7 /* PlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E7CB0225B5961200E14AB7 /* PlanCell.swift */; };
-		C1E7CB0525B5961200E14AB7 /* BibleReadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E7CB0325B5961200E14AB7 /* BibleReadingCell.xib */; };
+		C1E7CB0525B5961200E14AB7 /* PlanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E7CB0325B5961200E14AB7 /* PlanCell.xib */; };
 		C1FB96AB25BFAC4F00D470A9 /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = C1FB96AA25BFAC4F00D470A9 /* PanModal */; };
 		C1FB96B525BFACAE00D470A9 /* BibleFontRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FB96B025BFACAE00D470A9 /* BibleFontRouter.swift */; };
 		C1FB96B625BFACAF00D470A9 /* BibleFontViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FB96B125BFACAE00D470A9 /* BibleFontViewController.storyboard */; };
@@ -145,14 +154,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B31CC412697D041002DD687 /* PlanDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDateCell.swift; sourceTree = "<group>"; };
+		0B31CC47269802D4002DD687 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		0B31CC4926981304002DD687 /* CALayer + Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer + Ex.swift"; sourceTree = "<group>"; };
+		0B31CC4C269817FF002DD687 /* PlanDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDetailRouter.swift; sourceTree = "<group>"; };
+		0B31CC4D269817FF002DD687 /* PlanDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDetailViewController.swift; sourceTree = "<group>"; };
+		0B31CC4E269817FF002DD687 /* PlanDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDetailBuilder.swift; sourceTree = "<group>"; };
+		0B31CC4F269817FF002DD687 /* PlanDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDetailInteractor.swift; sourceTree = "<group>"; };
+		0B31CC5426981874002DD687 /* PlanDetailViewController + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlanDetailViewController + UI.swift"; sourceTree = "<group>"; };
+		0B31CC572698496B002DD687 /* PlanPresetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanPresetCell.swift; sourceTree = "<group>"; };
 		0B330933262539680063BD46 /* PlanRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRouter.swift; sourceTree = "<group>"; };
 		0B330935262539680063BD46 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
 		0B330936262539680063BD46 /* PlanBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanBuilder.swift; sourceTree = "<group>"; };
 		0B330937262539680063BD46 /* PlanInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanInteractor.swift; sourceTree = "<group>"; };
-		0BB3DCED26948F260099F773 /* FindingReadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindingReadCell.swift; sourceTree = "<group>"; };
+		0BB3DCED26948F260099F773 /* PlanListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanListCell.swift; sourceTree = "<group>"; };
 		0BB3DCEF26948F360099F773 /* InProgressReadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InProgressReadingCell.swift; sourceTree = "<group>"; };
 		0BB3DCF12694A3C90099F773 /* MyPlanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlanCell.swift; sourceTree = "<group>"; };
-		0BB3DCF32694C3970099F773 /* Plan+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plan+UI.swift"; sourceTree = "<group>"; };
+		0BB3DCF32694C3970099F773 /* PlanViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlanViewController+UI.swift"; sourceTree = "<group>"; };
 		C101638E25B0950F0079EB69 /* SelectingVerseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingVerseRouter.swift; sourceTree = "<group>"; };
 		C101638F25B0950F0079EB69 /* SelectingVerseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingVerseViewController.swift; sourceTree = "<group>"; };
 		C101639025B0950F0079EB69 /* SelectingVerseBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingVerseBuilder.swift; sourceTree = "<group>"; };
@@ -248,7 +266,7 @@
 		C1E775FA25CE3CA100C2FCB9 /* PrayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerCell.swift; sourceTree = "<group>"; };
 		C1E775FB25CE3CA100C2FCB9 /* PrayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerCell.xib; sourceTree = "<group>"; };
 		C1E7CB0225B5961200E14AB7 /* PlanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanCell.swift; sourceTree = "<group>"; };
-		C1E7CB0325B5961200E14AB7 /* BibleReadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BibleReadingCell.xib; sourceTree = "<group>"; };
+		C1E7CB0325B5961200E14AB7 /* PlanCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanCell.xib; sourceTree = "<group>"; };
 		C1FB96B025BFACAE00D470A9 /* BibleFontRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleFontRouter.swift; sourceTree = "<group>"; };
 		C1FB96B125BFACAE00D470A9 /* BibleFontViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BibleFontViewController.storyboard; sourceTree = "<group>"; };
 		C1FB96B225BFACAE00D470A9 /* BibleFontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleFontViewController.swift; sourceTree = "<group>"; };
@@ -296,6 +314,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B31CC4B269817EA002DD687 /* PlanDetail */ = {
+			isa = PBXGroup;
+			children = (
+				0B31CC562698195B002DD687 /* Components */,
+				0B31CC4C269817FF002DD687 /* PlanDetailRouter.swift */,
+				0B31CC4E269817FF002DD687 /* PlanDetailBuilder.swift */,
+				0B31CC4F269817FF002DD687 /* PlanDetailInteractor.swift */,
+				0B31CC4D269817FF002DD687 /* PlanDetailViewController.swift */,
+				0B31CC5426981874002DD687 /* PlanDetailViewController + UI.swift */,
+			);
+			path = PlanDetail;
+			sourceTree = "<group>";
+		};
+		0B31CC562698195B002DD687 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0B31CC412697D041002DD687 /* PlanDateCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		0B330932262537EB0063BD46 /* Plan */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,7 +343,7 @@
 				0B330936262539680063BD46 /* PlanBuilder.swift */,
 				0B330937262539680063BD46 /* PlanInteractor.swift */,
 				0B330935262539680063BD46 /* PlanViewController.swift */,
-				0BB3DCF32694C3970099F773 /* Plan+UI.swift */,
+				0BB3DCF32694C3970099F773 /* PlanViewController+UI.swift */,
 			);
 			path = Plan;
 			sourceTree = "<group>";
@@ -313,8 +352,9 @@
 			isa = PBXGroup;
 			children = (
 				0BB3DCEF26948F360099F773 /* InProgressReadingCell.swift */,
-				0BB3DCED26948F260099F773 /* FindingReadCell.swift */,
+				0BB3DCED26948F260099F773 /* PlanListCell.swift */,
 				0BB3DCF12694A3C90099F773 /* MyPlanCell.swift */,
+				0B31CC572698496B002DD687 /* PlanPresetCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -533,6 +573,7 @@
 				C1BE039825C07F4600D028E7 /* UserDefaults + Ex.swift */,
 				C1A3331E25E0360B007D0807 /* UILabel + Ex.swift */,
 				C15CF17025E5309D00C3AC6E /* Array + Ex.swift */,
+				0B31CC4926981304002DD687 /* CALayer + Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -562,6 +603,7 @@
 				C1D02CA925AE88430001CF6C /* Select */,
 				C101638D25B094E20079EB69 /* SelectingVerse */,
 				0B330932262537EB0063BD46 /* Plan */,
+				0B31CC4B269817EA002DD687 /* PlanDetail */,
 				C12B915E25B0339700DD6FB1 /* Setting */,
 				C1DDA3F225B1D70C00FCFDD3 /* SelectPlan */,
 			);
@@ -592,6 +634,7 @@
 			isa = PBXGroup;
 			children = (
 				C1D02CA425AE83120001CF6C /* BaseViewController.swift */,
+				0B31CC47269802D4002DD687 /* CircleView.swift */,
 			);
 			path = BaseComponents;
 			sourceTree = "<group>";
@@ -690,7 +733,7 @@
 			isa = PBXGroup;
 			children = (
 				C1E7CB0225B5961200E14AB7 /* PlanCell.swift */,
-				C1E7CB0325B5961200E14AB7 /* BibleReadingCell.xib */,
+				C1E7CB0325B5961200E14AB7 /* PlanCell.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -847,7 +890,7 @@
 				C168CF0225AC85CC008C1AFE /* LaunchScreen.storyboard in Resources */,
 				C16BD22525C5170D00C8139F /* NewPrayerViewController.storyboard in Resources */,
 				C1DDA3F925B1D74500FCFDD3 /* SelectPlanViewController.storyboard in Resources */,
-				C1E7CB0525B5961200E14AB7 /* BibleReadingCell.xib in Resources */,
+				C1E7CB0525B5961200E14AB7 /* PlanCell.xib in Resources */,
 				C12B917325B03DE400DD6FB1 /* BibleVerseCell.xib in Resources */,
 				C1E775FD25CE3CA100C2FCB9 /* PrayerCell.xib in Resources */,
 				C12069BF25C2E9D800C8A7B7 /* PrayerViewController.storyboard in Resources */,
@@ -889,6 +932,7 @@
 				C168CF4A25AC8834008C1AFE /* RootViewController.swift in Sources */,
 				C12069BE25C2E9D800C8A7B7 /* PrayerRouter.swift in Sources */,
 				C101639325B0950F0079EB69 /* SelectingVerseRouter.swift in Sources */,
+				0B31CC51269817FF002DD687 /* PlanDetailViewController.swift in Sources */,
 				C1D02C1125AC89E20001CF6C /* AppComponent.swift in Sources */,
 				C1D02C3425AC94EC0001CF6C /* UINavigation + Ex.swift in Sources */,
 				C1D02CA525AE83120001CF6C /* BaseViewController.swift in Sources */,
@@ -901,13 +945,16 @@
 				C16BD1F725C486CC00C8139F /* VIPDetailRouter.swift in Sources */,
 				C16BD22825C5170D00C8139F /* NewPrayerInteractor.swift in Sources */,
 				C1D02C2D25AC939A0001CF6C /* BibleBuilder.swift in Sources */,
+				0B31CC48269802D4002DD687 /* CircleView.swift in Sources */,
 				C16BD19D25C4324300C8139F /* VIPManager.swift in Sources */,
 				C12B916425B0340800DD6FB1 /* SettingRouter.swift in Sources */,
 				C1BE039925C07F4600D028E7 /* UserDefaults + Ex.swift in Sources */,
 				C101639525B0950F0079EB69 /* SelectingVerseBuilder.swift in Sources */,
+				0B31CC5526981874002DD687 /* PlanDetailViewController + UI.swift in Sources */,
 				C1E775FC25CE3CA100C2FCB9 /* PrayerCell.swift in Sources */,
 				C12069C225C2E9D800C8A7B7 /* PrayerInteractor.swift in Sources */,
 				C1A3331F25E0360B007D0807 /* UILabel + Ex.swift in Sources */,
+				0B31CC52269817FF002DD687 /* PlanDetailBuilder.swift in Sources */,
 				C101639425B0950F0079EB69 /* SelectingVerseViewController.swift in Sources */,
 				C16BD1F925C486CC00C8139F /* VIPDetailViewController.swift in Sources */,
 				C1D02C8825AE74BF0001CF6C /* UIViewController + Ex.swift in Sources */,
@@ -916,11 +963,12 @@
 				C12069C025C2E9D800C8A7B7 /* PrayerViewController.swift in Sources */,
 				C1FB96B525BFACAE00D470A9 /* BibleFontRouter.swift in Sources */,
 				C1D02C2A25AC939A0001CF6C /* BibleRouter.swift in Sources */,
+				0B31CC53269817FF002DD687 /* PlanDetailInteractor.swift in Sources */,
 				C168CF4C25AC8834008C1AFE /* RootInteractor.swift in Sources */,
 				C1D02CB125AE89A40001CF6C /* SelectViewController.swift in Sources */,
 				C1D02CAF25AE89A40001CF6C /* SelectRouter.swift in Sources */,
 				C12B916625B0340800DD6FB1 /* SettingViewController.swift in Sources */,
-				0BB3DCEE26948F260099F773 /* FindingReadCell.swift in Sources */,
+				0BB3DCEE26948F260099F773 /* PlanListCell.swift in Sources */,
 				C1D02C1D25AC8DAA0001CF6C /* MainTabBarInteractor.swift in Sources */,
 				C1D02CC825AE97AF0001CF6C /* BibleManager.swift in Sources */,
 				C1D02CB225AE89A40001CF6C /* SelectBuilder.swift in Sources */,
@@ -928,6 +976,7 @@
 				C16BD1E525C4808600C8139F /* VIP.swift in Sources */,
 				C1D02C1B25AC8DAA0001CF6C /* MainTabBarViewController.swift in Sources */,
 				C16BD1BC25C4674B00C8139F /* NewVIPRouter.swift in Sources */,
+				0B31CC422697D041002DD687 /* PlanDateCell.swift in Sources */,
 				C1FB96B825BFACAF00D470A9 /* BibleFontBuilder.swift in Sources */,
 				0B33093A262539690063BD46 /* PlanViewController.swift in Sources */,
 				C1DDA3F825B1D74500FCFDD3 /* SelectPlanRouter.swift in Sources */,
@@ -945,14 +994,17 @@
 				C1DDA3FA25B1D74500FCFDD3 /* SelectPlanViewController.swift in Sources */,
 				C1FB96B725BFACAF00D470A9 /* BibleFontViewController.swift in Sources */,
 				C1D02C2E25AC939A0001CF6C /* BibleInteractor.swift in Sources */,
+				0B31CC50269817FF002DD687 /* PlanDetailRouter.swift in Sources */,
 				0B330938262539690063BD46 /* PlanRouter.swift in Sources */,
 				C1D02C1C25AC8DAA0001CF6C /* MainTabBarBuilder.swift in Sources */,
 				C1D02C1A25AC8DAA0001CF6C /* MainTabBarRouter.swift in Sources */,
 				C1D02CBA25AE961F0001CF6C /* BiblePresentableState.swift in Sources */,
 				C1DDA40725B295A400FCFDD3 /* Schedule.swift in Sources */,
 				C15DF10025E40DE700D447FC /* PrayerOptionView.swift in Sources */,
+				0B31CC4A26981304002DD687 /* CALayer + Ex.swift in Sources */,
 				C168CEF625AC85C9008C1AFE /* AppDelegate.swift in Sources */,
-				0BB3DCF42694C3970099F773 /* Plan+UI.swift in Sources */,
+				0B31CC582698496B002DD687 /* PlanPresetCell.swift in Sources */,
+				0BB3DCF42694C3970099F773 /* PlanViewController+UI.swift in Sources */,
 				C12B917225B03DE400DD6FB1 /* BibleVerseCell.swift in Sources */,
 				C168CEF825AC85C9008C1AFE /* SceneDelegate.swift in Sources */,
 				0B33093B262539690063BD46 /* PlanBuilder.swift in Sources */,
