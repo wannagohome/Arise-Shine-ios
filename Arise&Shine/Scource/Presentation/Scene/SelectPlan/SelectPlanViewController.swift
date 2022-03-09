@@ -43,7 +43,7 @@ final class SelectPlanViewController:
     }
     
     override func attribute() {
-        self.tableView.register(UINib(nibName: "PlangCell",
+        self.tableView.register(UINib(nibName: "PlanCell",
                                       bundle: nil),
                                 forCellReuseIdentifier: PlanCell.description())
     }

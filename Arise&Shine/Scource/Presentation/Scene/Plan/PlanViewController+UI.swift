@@ -63,8 +63,8 @@ extension PlanViewController {
                 forCellWithReuseIdentifier: InProgressReadingCell.description()
             )
             $0.register(
-                FindingReadCell.self,
-                forCellWithReuseIdentifier: FindingReadCell.description()
+                PlanListCell.self,
+                forCellWithReuseIdentifier: PlanListCell.description()
             )
         }
     }

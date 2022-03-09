@@ -9,17 +9,19 @@ import RIBs
 import RxSwift
 import UIKit
 import Then
+import ReactorKit
+
+enum PlanPresentableAction {
+    case selectProgressingPlan
+}
 
 protocol PlanPresentableListener: AnyObject {
-    // TODO: Declare properties and methods that the view controller can invoke to perform
-    // business logic, such as signIn(). This protocol is implemented by the corresponding
-    // interactor class.
+    var action: ActionSubject<PlanPresentableAction> { get }
 }
 
 final class PlanViewController:
     BaseViewController,
-    PlanPresentable,
-    PlanViewControllable {
+    PlanPresentable {
 
     weak var listener: PlanPresentableListener?
     
@@ -91,9 +93,19 @@ extension PlanViewController: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        indexPath.row == 0
-            ? collectionView.dequeueReusableCell(withReuseIdentifier: InProgressReadingCell.description(), for: indexPath)
-            : collectionView.dequeueReusableCell(withReuseIdentifier: FindingReadCell.description(), for: indexPath)
+        if indexPath.row == 0 {
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: InProgressReadingCell.description(),
+                for: indexPath
+            ) as! InProgressReadingCell
+            cell.delegate = self
+            return cell
+        } else {
+            return collectionView.dequeueReusableCell(
+                withReuseIdentifier: PlanListCell.description(),
+                for: indexPath
+            )
+        }
     }
 }
 
@@ -104,6 +116,27 @@ extension PlanViewController: UICollectionViewDelegateFlowLayout {
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
         self.collectionView.bounds.size
+    }
+}
+
+extension PlanViewController: InProgressDelegate {
+    func select(index: IndexPath) {
+        self.listener?.action.onNext(.selectProgressingPlan)
+    }
+}
+
+extension PlanViewController: PlanViewControllable {
+    func push(viewConroller: ViewControllable) {
+        self.navigationController?.pushViewController(
+            viewConroller.uiviewController,
+            animated: true
+        )
+    }
+    
+    func pop(viewController: ViewControllable) {
+        if self.presentedViewController === viewController.uiviewController {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }
 

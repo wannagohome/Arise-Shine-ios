@@ -7,20 +7,47 @@
 
 import RIBs
 
-protocol PlanInteractable: Interactable {
+protocol PlanInteractable:
+    Interactable,
+    PlanDetailListener {
     var router: PlanRouting? { get set }
     var listener: PlanListener? { get set }
 }
 
 protocol PlanViewControllable: ViewControllable {
-    // TODO: Declare methods the router invokes to manipulate the view hierarchy.
+    func push(viewConroller: ViewControllable)
+    func pop(viewController: ViewControllable)
 }
 
-final class PlanRouter: ViewableRouter<PlanInteractable, PlanViewControllable>, PlanRouting {
+final class PlanRouter:
+    ViewableRouter<PlanInteractable, PlanViewControllable>,
+    PlanRouting {
 
-    // TODO: Constructor inject child builder protocols to allow building children.
-    override init(interactor: PlanInteractable, viewController: PlanViewControllable) {
+    private let planDetailBuilder: PlanDetailBuildable
+    private var planDetailRouter: PlanDetailRouting?
+    
+    init(
+        interactor: PlanInteractable,
+        viewController: PlanViewControllable,
+        planDetailBuilder: PlanDetailBuildable
+    ) {
+        self.planDetailBuilder = planDetailBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
+    }
+    
+    func attatchPlanDetail() {
+        let router = self.planDetailBuilder.build(withListener: self.interactor)
+        self.planDetailRouter = router
+        self.attachChild(router)
+        self.viewController.push(viewConroller: router.viewControllable)
+    }
+    
+    func detachPlanDeatil() {
+        if let router = self.planDetailRouter {
+            self.detachChild(router)
+            self.viewController.pop(viewController: router.viewControllable)
+            self.planDetailRouter = nil
+        }
     }
 }

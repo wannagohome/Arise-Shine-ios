@@ -31,10 +31,12 @@ final class PrayerRouter:
     private let vipDetailBuilder: VIPDetailBuildable
     private var vipDeatilRouter: VIPDetailRouting?
     
-    init(interactor: PrayerInteractable,
-         viewController: PrayerViewControllable,
-         newVIPBuilder: NewVIPBuildable,
-         vipDetailBuilder: VIPDetailBuildable) {
+    init(
+        interactor: PrayerInteractable,
+        viewController: PrayerViewControllable,
+        newVIPBuilder: NewVIPBuildable,
+        vipDetailBuilder: VIPDetailBuildable
+    ) {
         
         self.newVIPBuilder = newVIPBuilder
         self.vipDetailBuilder = vipDetailBuilder
