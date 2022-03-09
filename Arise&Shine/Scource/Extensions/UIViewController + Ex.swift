@@ -30,7 +30,7 @@ enum StoryboardType {
     case bibleFont
     case select
     
-    case bibleReading
+    case plan
     
     case prayer
     case newVIP
@@ -38,7 +38,7 @@ enum StoryboardType {
     case newPrayer
     
     case setting
-    case selectBibleReading
+    case selectPlan
     
     var fileName: String {
         switch self {
@@ -49,8 +49,8 @@ enum StoryboardType {
         case .select:
             return "SelectViewController"
             
-        case .bibleReading:
-            return "BibleReadingViewController"
+        case .plan:
+            return "PlanViewController"
             
         case .prayer:
             return "PrayerViewController"
@@ -63,8 +63,8 @@ enum StoryboardType {
             
         case .setting:
             return "SettingViewController"
-        case .selectBibleReading:
-            return "SelectBibleReadingViewController"
+        case .selectPlan:
+            return "SelectPlanViewController"
         }
     }
     

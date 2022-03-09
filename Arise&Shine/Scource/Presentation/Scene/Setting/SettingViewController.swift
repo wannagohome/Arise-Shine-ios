@@ -18,7 +18,7 @@ protocol SettingPresentableListener: AnyObject {
     var state: Observable<SettingPresentableState> { get }
     var currentState: SettingPresentableState { get }
     
-    func pushSelectBibleReading()
+    func pushSelectPlan()
 }
 
 final class SettingViewController:
@@ -105,7 +105,7 @@ extension SettingViewController {
         self.tableView.rx.itemSelected
             .filter { $0.row == 0 }
             .subscribe(onNext: { [weak self] _ in
-                self?.listener?.pushSelectBibleReading()
+                self?.listener?.pushSelectPlan()
             })
             .disposed(by: self.disposeBag)
     }

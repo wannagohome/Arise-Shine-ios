@@ -15,18 +15,18 @@ protocol MainTabBarDependency: Dependency {
 final class MainTabBarComponent:
     Component<MainTabBarDependency>,
     BibleDependency,
-    BibleReadingDependency,
+    PlanDependency,
     PrayerDependency,
     SettingDependency {
     
     var bibleViewController: BiblePresentable & BibleViewControllable
-    var bibleReadingViewController: BibleReadingPresentable & BibleReadingViewControllable
+    var planViewController: PlanPresentable & PlanViewControllable
     var prayerViewController: PrayerPresentable & PrayerViewControllable
     var settingViewController: SettingPresentable & SettingViewControllable
     
     override init(dependency: MainTabBarDependency) {
         self.bibleViewController = BibleViewController.initWithStoryBoard()
-        self.bibleReadingViewController = BibleReadingViewController()
+        self.planViewController = PlanViewController()
         self.prayerViewController = PrayerViewController.initWithStoryBoard()
         self.settingViewController = SettingViewController.initWithStoryBoard()
         super.init(dependency: dependency)
@@ -52,7 +52,7 @@ final class MainTabBarBuilder:
         
         let viewControllers = [
             component.bibleViewController,
-            component.bibleReadingViewController,
+            component.planViewController,
             component.prayerViewController,
             component.settingViewController
         ].map { UINavigationController(root: $0) }
@@ -63,14 +63,14 @@ final class MainTabBarBuilder:
         interactor.listener = listener
         
         let bibleBuilder = BibleBuilder(dependency: component)
-        let bibleReadingBuilder = BibleReadingBuilder(dependency: component)
+        let planBuilder = PlanBuilder(dependency: component)
         let prayerBuiler = PrayerBuilder(dependency: component)
         let settingBuilder = SettingBuilder(dependency: component)
         
         return MainTabBarRouter(interactor: interactor,
                                 viewController: viewController,
                                 bibleBuilder: bibleBuilder,
-                                bibleReadingBuilder: bibleReadingBuilder,
+                                planBuilder: planBuilder,
                                 prayerBuilder: prayerBuiler,
                                 settingBuilder: settingBuilder)
     }

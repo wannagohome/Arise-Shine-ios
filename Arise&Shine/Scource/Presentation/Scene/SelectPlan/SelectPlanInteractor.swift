@@ -1,5 +1,5 @@
 //
-//  SelectBibleReadingInteractor.swift
+//  SelectPlanInteractor.swift
 //  Arise&Shine
 //
 //  Created by Jinho Jang on 2021/01/15.
@@ -12,37 +12,37 @@ import ReactorKit
 
 import SQLite
 
-protocol SelectBibleReadingRouting: ViewableRouting {
+protocol SelectPlanRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
-protocol SelectBibleReadingPresentable: Presentable {
-    var listener: SelectBibleReadingPresentableListener? { get set }
+protocol SelectPlanPresentable: Presentable {
+    var listener: SelectPlanPresentableListener? { get set }
 }
 
-protocol SelectBibleReadingListener: AnyObject {
-    func popBibleReading()
+protocol SelectPlanListener: AnyObject {
+    func popPlan()
 }
 
-struct SelectBibleReadingPresentableState {
-    var schedules: [BibleReadingSchedule]
+struct SelectPlanPresentableState {
+    var schedules: [Schedule]
     var toastMessage: String?
     var isShowingMessage: Bool = false
 }
 
 
-final class SelectBibleReadingInteractor:
-    PresentableInteractor<SelectBibleReadingPresentable>,
-    SelectBibleReadingInteractable,
-    SelectBibleReadingPresentableListener,
+final class SelectPlanInteractor:
+    PresentableInteractor<SelectPlanPresentable>,
+    SelectPlanInteractable,
+    SelectPlanPresentableListener,
     Reactor {
     
     // MARK: - Reactor
     
-    typealias Action = SelectBibleReadingPresentableAction
-    typealias State = SelectBibleReadingPresentableState
+    typealias Action = SelectPlanPresentableAction
+    typealias State = SelectPlanPresentableState
     
-    var initialState: SelectBibleReadingPresentableState
+    var initialState: SelectPlanPresentableState
     
     enum Mutaion {
         case setToastMessage(String)
@@ -50,13 +50,13 @@ final class SelectBibleReadingInteractor:
     
     // MARK: - Properties
     
-    weak var router: SelectBibleReadingRouting?
-    weak var listener: SelectBibleReadingListener?
+    weak var router: SelectPlanRouting?
+    weak var listener: SelectPlanListener?
     
     // MARK: - Initialization
     
-    init(presenter: SelectBibleReadingPresentable,
-         initialState: SelectBibleReadingPresentableState) {
+    init(presenter: SelectPlanPresentable,
+         initialState: SelectPlanPresentableState) {
         
         self.initialState = initialState
         super.init(presenter: presenter)
@@ -92,7 +92,7 @@ final class SelectBibleReadingInteractor:
             return Observable.just(Mutaion.setToastMessage("'\(selected.title)' 성경 통독을 시작합니다."))
             
         case .pop:
-            self.listener?.popBibleReading()
+            self.listener?.popPlan()
             return .empty()
         }
     }
