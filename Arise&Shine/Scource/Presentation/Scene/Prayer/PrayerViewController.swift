@@ -32,7 +32,6 @@ final class PrayerViewController:
     typealias VIPDataSource = RxTableViewSectionedReloadDataSource<VIPSection>
     
     // MARK: - Properties
-    
     weak var listener: PrayerPresentableListener?
     let dataSource = VIPDataSource {
         dataSource, tb, indexPath, item -> UITableViewCell in
@@ -42,19 +41,22 @@ final class PrayerViewController:
         return cell
     }
     
-    
     // MARK: - Views
-    
-    @IBOutlet weak var tableView: UITableView!
+    let tableView = UITableView(frame: .zero, style: .grouped)
+    let createCellButton = UIButton()
     
     // MARK: - Initialization
-    
-    override func initialize() {
+    init() {
+        super.init(nibName: nil, bundle: nil)
         self.setTabBarItem()
+        self.setNavBarItem()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rx.setDelegate(self)
@@ -62,13 +64,29 @@ final class PrayerViewController:
         self.bind(listener: self.listener)
     }
     
-    override func attribute() {
-        self.tableView.register(UINib(nibName: "VIPCell", bundle: nil),
-                                forCellReuseIdentifier: VIPCell.description())
-        self.tableView.backgroundColor = .clear
+    //MARK: - UI
+    override func layout() {
+        self.view.addSubview(self.tableView)
+        
+        self.tableView.snp.makeConstraints { m in
+            m.edges.equalTo(self.view.safeAreaLayoutGuide)
+                .inset(UIEdgeInsets(top: 20, left: 15, bottom: 0, right: 15))
+        }
     }
     
-    // MARK: - Private methods
+    override func attribute() {
+        self.tableView.do {
+            $0.register(
+                UINib(nibName: "VIPCell", bundle: nil),
+                forCellReuseIdentifier: VIPCell.description()
+            )
+            $0.backgroundColor = .clear
+        }
+        self.createCellButton.do {
+            $0.tintColor = .black
+            $0.setImage(.init(systemName: "plus"), for: .normal)
+        }
+    }
     
     private func setTabBarItem() {
         let item = UITabBarItem(title: "Prayer",
@@ -78,6 +96,12 @@ final class PrayerViewController:
         self.tabBarItem = item
     }
     
+    private func setNavBarItem() {
+        self.navigationItem.rightBarButtonItem
+            = UIBarButtonItem(customView: self.createCellButton)
+    }
+    
+    // MARK: - Private methods
     private func bind(listener: PrayerPresentableListener?) {
         guard let listener = listener else { return }
         
@@ -92,12 +116,6 @@ final class PrayerViewController:
     
     private func bindState(from listener: PrayerPresentableListener) {
         self.bindVIPs(from: listener, with: self.dataSource)
-    }
-}
-
-extension PrayerViewController {
-    static func initWithStoryBoard() -> PrayerViewController {
-        PrayerViewController.withStoryboard(storyboard: .prayer)
     }
 }
 
@@ -118,7 +136,10 @@ extension PrayerViewController: PrayerViewControllable {
 }
 
 extension PrayerViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(
+        _ tableView: UITableView,
+        viewForHeaderInSection section: Int
+    ) -> UIView? {
         let header = VIPHeader()
         header.label.text = "내 VIP"
         if let listener = self.listener {
@@ -131,11 +152,17 @@ extension PrayerViewController: UITableViewDelegate {
         return header
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(
+        _ tableView: UITableView,
+        heightForRowAt indexPath: IndexPath
+    ) -> CGFloat {
         70
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(
+        _ tableView: UITableView,
+        heightForHeaderInSection section: Int
+    ) -> CGFloat {
         60
     }
 }
@@ -144,7 +171,6 @@ extension PrayerViewController: UITableViewDelegate {
 extension PrayerViewController {
     
     // MARK: - Binding Action
-    
     func bindViewWillAppear(to listener: PrayerPresentableListener) {
         self.rx.viewWillAppear
             .map { _ in .viewWillAppear }
@@ -160,7 +186,6 @@ extension PrayerViewController {
     }
     
     // MARK: - Biding State
-    
     func bindVIPs(from listener: PrayerPresentableListener,
                   with dataSource: VIPDataSource) {
         

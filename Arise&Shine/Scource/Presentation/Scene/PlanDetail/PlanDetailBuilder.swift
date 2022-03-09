@@ -30,7 +30,7 @@ final class PlanDetailBuilder: Builder<PlanDetailDependency>, PlanDetailBuildabl
     }
 
     func build(withListener listener: PlanDetailListener) -> PlanDetailRouting {
-        let component = PlanDetailComponent(dependency: dependency)
+        let _ = PlanDetailComponent(dependency: dependency)
         let viewController = PlanDetailViewController()
         let interactor = PlanDetailInteractor(presenter: viewController)
         interactor.listener = listener

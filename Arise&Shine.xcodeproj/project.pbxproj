@@ -33,7 +33,6 @@
 		C1103ABF25BE60AA002AEABA /* SchedulesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1103ABE25BE60AA002AEABA /* SchedulesManager.swift */; };
 		C11FF95C25CC574100E347D7 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = C11FF95B25CC574100E347D7 /* RxGesture */; };
 		C12069BE25C2E9D800C8A7B7 /* PrayerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12069B925C2E9D800C8A7B7 /* PrayerRouter.swift */; };
-		C12069BF25C2E9D800C8A7B7 /* PrayerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12069BA25C2E9D800C8A7B7 /* PrayerViewController.storyboard */; };
 		C12069C025C2E9D800C8A7B7 /* PrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12069BB25C2E9D800C8A7B7 /* PrayerViewController.swift */; };
 		C12069C125C2E9D800C8A7B7 /* PrayerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12069BC25C2E9D800C8A7B7 /* PrayerBuilder.swift */; };
 		C12069C225C2E9D800C8A7B7 /* PrayerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12069BD25C2E9D800C8A7B7 /* PrayerInteractor.swift */; };
@@ -179,7 +178,6 @@
 		C1103AB925BDA111002AEABA /* UITabBarController + Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController + Ex.swift"; sourceTree = "<group>"; };
 		C1103ABE25BE60AA002AEABA /* SchedulesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesManager.swift; sourceTree = "<group>"; };
 		C12069B925C2E9D800C8A7B7 /* PrayerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerRouter.swift; sourceTree = "<group>"; };
-		C12069BA25C2E9D800C8A7B7 /* PrayerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrayerViewController.storyboard; sourceTree = "<group>"; };
 		C12069BB25C2E9D800C8A7B7 /* PrayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerViewController.swift; sourceTree = "<group>"; };
 		C12069BC25C2E9D800C8A7B7 /* PrayerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerBuilder.swift; sourceTree = "<group>"; };
 		C12069BD25C2E9D800C8A7B7 /* PrayerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerInteractor.swift; sourceTree = "<group>"; };
@@ -379,7 +377,6 @@
 				C12069BC25C2E9D800C8A7B7 /* PrayerBuilder.swift */,
 				C12069BD25C2E9D800C8A7B7 /* PrayerInteractor.swift */,
 				C12069BB25C2E9D800C8A7B7 /* PrayerViewController.swift */,
-				C12069BA25C2E9D800C8A7B7 /* PrayerViewController.storyboard */,
 			);
 			path = Prayer;
 			sourceTree = "<group>";
@@ -893,7 +890,6 @@
 				C1E7CB0525B5961200E14AB7 /* PlanCell.xib in Resources */,
 				C12B917325B03DE400DD6FB1 /* BibleVerseCell.xib in Resources */,
 				C1E775FD25CE3CA100C2FCB9 /* PrayerCell.xib in Resources */,
-				C12069BF25C2E9D800C8A7B7 /* PrayerViewController.storyboard in Resources */,
 				C168CEFF25AC85CC008C1AFE /* Assets.xcassets in Resources */,
 				C1FB96B625BFACAF00D470A9 /* BibleFontViewController.storyboard in Resources */,
 				C16BD1A525C440C200C8139F /* VIPCell.xib in Resources */,
