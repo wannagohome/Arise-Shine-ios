@@ -27,7 +27,7 @@ final class MainTabBarComponent:
     override init(dependency: MainTabBarDependency) {
         self.bibleViewController = BibleViewController.initWithStoryBoard()
         self.planViewController = PlanViewController()
-        self.prayerViewController = PrayerViewController.initWithStoryBoard()
+        self.prayerViewController = PrayerViewController()
         self.settingViewController = SettingViewController.initWithStoryBoard()
         super.init(dependency: dependency)
     }
