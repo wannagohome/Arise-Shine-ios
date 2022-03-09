@@ -11,8 +11,8 @@ import ReactorKit
 import RxSwift
 
 protocol SettingRouting: ViewableRouting {
-    func attatchSelectBibleReading()
-    func detachSelectBibleReading()
+    func attatchSelectPlan()
+    func detachSelectPlan()
 }
 
 protocol SettingPresentable: Presentable {
@@ -56,11 +56,11 @@ final class SettingInteractor:
 }
 
 extension SettingInteractor: SettingPresentableListener {
-    func pushSelectBibleReading() {
-        self.router?.attatchSelectBibleReading()
+    func pushSelectPlan() {
+        self.router?.attatchSelectPlan()
     }
     
-    func popBibleReading() {
-        self.router?.detachSelectBibleReading()
+    func popPlan() {
+        self.router?.detachSelectPlan()
     }
 }

@@ -1,5 +1,5 @@
 //
-//  BibleReadingCell.swift
+//  PlanCell.swift
 //  Arise&Shine
 //
 //  Created by Jinho Jang on 2021/01/18.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class BibleReadingCell: UITableViewCell {
+class PlanCell: UITableViewCell {
     
-    var schedule: BibleReadingSchedule? {
+    var schedule: Schedule? {
         didSet {
             self.textLabel?.text = self.schedule?.title
         }

@@ -1,5 +1,5 @@
 //
-//  BibleReading+UI.swift
+//  Plan+UI.swift
 //  Arise&Shine
 //
 //  Created by wemeet_pete on 2021/07/07.
@@ -8,7 +8,7 @@
 import UIKit
 
 
-extension BibleReadingViewController {
+extension PlanViewController {
     func _layout() {
         self.view.addSubview(self.tabBarStackView)
         self.tabBarStackView.addArrangedSubview(self.inProgressTabButton)

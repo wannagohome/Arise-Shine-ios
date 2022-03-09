@@ -1,5 +1,5 @@
 //
-//  SelectBibleReadingViewController.swift
+//  SelectPlanViewController.swift
 //  Arise&Shine
 //
 //  Created by Jinho Jang on 2021/01/15.
@@ -11,25 +11,25 @@ import ReactorKit
 import UIKit
 import Toaster
 
-enum SelectBibleReadingPresentableAction {
-    case selectSchedule(with: BibleReadingSchedule)
+enum SelectPlanPresentableAction {
+    case selectSchedule(with: Schedule)
     case pop
 }
 
-protocol SelectBibleReadingPresentableListener: AnyObject {
-    var action: ActionSubject<SelectBibleReadingPresentableAction> { get }
-    var state: Observable<SelectBibleReadingPresentableState> { get }
-    var currentState: SelectBibleReadingPresentableState { get }
+protocol SelectPlanPresentableListener: AnyObject {
+    var action: ActionSubject<SelectPlanPresentableAction> { get }
+    var state: Observable<SelectPlanPresentableState> { get }
+    var currentState: SelectPlanPresentableState { get }
 }
 
-final class SelectBibleReadingViewController:
+final class SelectPlanViewController:
     BaseViewController,
-    SelectBibleReadingPresentable,
-    SelectBibleReadingViewControllable {
+    SelectPlanPresentable,
+    SelectPlanViewControllable {
     
     // MARK: - Properties
 
-    weak var listener: SelectBibleReadingPresentableListener?
+    weak var listener: SelectPlanPresentableListener?
     
     // MARK: - Views
     
@@ -43,14 +43,14 @@ final class SelectBibleReadingViewController:
     }
     
     override func attribute() {
-        self.tableView.register(UINib(nibName: "BibleReadingCell",
+        self.tableView.register(UINib(nibName: "PlangCell",
                                       bundle: nil),
-                                forCellReuseIdentifier: BibleReadingCell.description())
+                                forCellReuseIdentifier: PlanCell.description())
     }
     
     // MARK: - Private methods
     
-    private func bind(listener: SelectBibleReadingPresentableListener?) {
+    private func bind(listener: SelectPlanPresentableListener?) {
         guard let listener = listener else { return }
         
         self.bindActions(to: listener)
@@ -59,35 +59,35 @@ final class SelectBibleReadingViewController:
                                   isDismissing: self.isDismissing)
     }
     
-    private func bindActions(to listener: SelectBibleReadingPresentableListener) {
+    private func bindActions(to listener: SelectPlanPresentableListener) {
         self.bindTableSelect(to: listener)
     }
     
-    private func bindState(from listener: SelectBibleReadingPresentableListener) {
+    private func bindState(from listener: SelectPlanPresentableListener) {
         self.bindSchedules(from: listener)
         self.bindToastMessage(from: listener)
     }
 }
 
-extension SelectBibleReadingViewController {
-    static func initWithStoryBoard() -> SelectBibleReadingViewController {
-        SelectBibleReadingViewController.withStoryboard(storyboard: .selectBibleReading)
+extension SelectPlanViewController {
+    static func initWithStoryBoard() -> SelectPlanViewController {
+        SelectPlanViewController.withStoryboard(storyboard: .selectPlan)
     }
 }
 
 
-private extension SelectBibleReadingViewController {
+private extension SelectPlanViewController {
     
     // MARK: - Binding Action
     
-    func bindTableSelect(to listener: SelectBibleReadingPresentableListener) {
-        self.tableView.rx.modelSelected(BibleReadingSchedule.self)
+    func bindTableSelect(to listener: SelectPlanPresentableListener) {
+        self.tableView.rx.modelSelected(Schedule.self)
             .map { .selectSchedule(with: $0) }
             .bind(to: listener.action)
             .disposed(by: self.disposeBag)
     }
     
-    func bindViewDidDisappear(to listener: SelectBibleReadingPresentableListener,
+    func bindViewDidDisappear(to listener: SelectPlanPresentableListener,
                               isDismissing: Bool) {
         self.rx.viewDidDisappear
             .filter { _ in isDismissing }
@@ -98,19 +98,19 @@ private extension SelectBibleReadingViewController {
     
     // MARK: - Biding State
     
-    func bindSchedules(from listener: SelectBibleReadingPresentableListener) {
+    func bindSchedules(from listener: SelectPlanPresentableListener) {
         listener.state.map { $0.schedules }
             .asDriver(onErrorDriveWith: .empty())
             .drive(self.tableView.rx.items) { tb, row, item in
-                let cell = tb.dequeueReusableCell(withIdentifier: BibleReadingCell.description(),
-                                                  for: IndexPath(row: row, section: 0)) as! BibleReadingCell
+                let cell = tb.dequeueReusableCell(withIdentifier: PlanCell.description(),
+                                                  for: IndexPath(row: row, section: 0)) as! PlanCell
                 cell.schedule = item
                 return cell
             }
             .disposed(by: self.disposeBag)
     }
     
-    func bindToastMessage(from listener: SelectBibleReadingPresentableListener) {
+    func bindToastMessage(from listener: SelectPlanPresentableListener) {
         listener.state.map { $0.isShowingMessage }
             .filter { $0 }
             .withLatestFrom(listener.state.map { $0.toastMessage })

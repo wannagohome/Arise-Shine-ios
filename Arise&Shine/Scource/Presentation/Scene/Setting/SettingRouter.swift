@@ -9,7 +9,7 @@ import RIBs
 
 protocol SettingInteractable:
     Interactable,
-    SelectBibleReadingListener {
+    SelectPlanListener {
     var router: SettingRouting? { get set }
     var listener: SettingListener? { get set }
 }
@@ -21,14 +21,14 @@ protocol SettingViewControllable: ViewControllable {
 
 final class SettingRouter: ViewableRouter<SettingInteractable, SettingViewControllable> {
     
-    private let selectBibleReadingBuilder: SelectBibleReadingBuildable
-    private var selectBibleReadingRouter: SelectBibleReadingRouting?
+    private let selectPlanBuilder: SelectPlanBuildable
+    private var selectPlanRouter: SelectPlanRouting?
     
     init(interactor: SettingInteractable,
          viewController: SettingViewControllable,
-         selectBibleReadingBuilder: SelectBibleReadingBuildable) {
+         selectPlanBuilder: SelectPlanBuildable) {
         
-        self.selectBibleReadingBuilder = selectBibleReadingBuilder
+        self.selectPlanBuilder = selectPlanBuilder
         super.init(interactor: interactor,
                    viewController: viewController)
         interactor.router = self
@@ -36,18 +36,18 @@ final class SettingRouter: ViewableRouter<SettingInteractable, SettingViewContro
 }
 
 extension SettingRouter: SettingRouting {
-    func attatchSelectBibleReading() {
-        let router = self.selectBibleReadingBuilder.build(withListener: self.interactor)
-        self.selectBibleReadingRouter = router
+    func attatchSelectPlan() {
+        let router = self.selectPlanBuilder.build(withListener: self.interactor)
+        self.selectPlanRouter = router
         self.attachChild(router)
         self.viewController.push(viewController: router.viewControllable)
     }
     
-    func detachSelectBibleReading() {
-        if let router = self.selectBibleReadingRouter {
+    func detachSelectPlan() {
+        if let router = self.selectPlanRouter {
             self.detachChild(router)
             self.viewController.pop(viewController: router.viewControllable)
-            self.selectBibleReadingRouter = nil
+            self.selectPlanRouter = nil
         }
     }
 }

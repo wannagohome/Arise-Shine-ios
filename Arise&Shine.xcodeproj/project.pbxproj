@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B330938262539690063BD46 /* BibleReadingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B330933262539680063BD46 /* BibleReadingRouter.swift */; };
-		0B33093A262539690063BD46 /* BibleReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B330935262539680063BD46 /* BibleReadingViewController.swift */; };
-		0B33093B262539690063BD46 /* BibleReadingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B330936262539680063BD46 /* BibleReadingBuilder.swift */; };
-		0B33093C262539690063BD46 /* BibleReadingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B330937262539680063BD46 /* BibleReadingInteractor.swift */; };
+		0B330938262539690063BD46 /* PlanRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B330933262539680063BD46 /* PlanRouter.swift */; };
+		0B33093A262539690063BD46 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B330935262539680063BD46 /* PlanViewController.swift */; };
+		0B33093B262539690063BD46 /* PlanBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B330936262539680063BD46 /* PlanBuilder.swift */; };
+		0B33093C262539690063BD46 /* PlanInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B330937262539680063BD46 /* PlanInteractor.swift */; };
 		0BB3DCEE26948F260099F773 /* FindingReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB3DCED26948F260099F773 /* FindingReadCell.swift */; };
 		0BB3DCF026948F360099F773 /* InProgressReadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB3DCEF26948F360099F773 /* InProgressReadingCell.swift */; };
 		0BB3DCF22694A3C90099F773 /* MyPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB3DCF12694A3C90099F773 /* MyPlanCell.swift */; };
-		0BB3DCF42694C3970099F773 /* BibleReading+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB3DCF32694C3970099F773 /* BibleReading+UI.swift */; };
+		0BB3DCF42694C3970099F773 /* Plan+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB3DCF32694C3970099F773 /* Plan+UI.swift */; };
 		C101639325B0950F0079EB69 /* SelectingVerseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C101638E25B0950F0079EB69 /* SelectingVerseRouter.swift */; };
 		C101639425B0950F0079EB69 /* SelectingVerseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C101638F25B0950F0079EB69 /* SelectingVerseViewController.swift */; };
 		C101639525B0950F0079EB69 /* SelectingVerseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C101639025B0950F0079EB69 /* SelectingVerseBuilder.swift */; };
@@ -108,16 +108,16 @@
 		C1D02CBA25AE961F0001CF6C /* BiblePresentableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02CB925AE961F0001CF6C /* BiblePresentableState.swift */; };
 		C1D02CC825AE97AF0001CF6C /* BibleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02CC725AE97AF0001CF6C /* BibleManager.swift */; };
 		C1D02CD025AEC1770001CF6C /* BibleChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02CCF25AEC1770001CF6C /* BibleChapter.swift */; };
-		C1DDA3F825B1D74500FCFDD3 /* SelectBibleReadingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDA3F325B1D74500FCFDD3 /* SelectBibleReadingRouter.swift */; };
-		C1DDA3F925B1D74500FCFDD3 /* SelectBibleReadingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DDA3F425B1D74500FCFDD3 /* SelectBibleReadingViewController.storyboard */; };
-		C1DDA3FA25B1D74500FCFDD3 /* SelectBibleReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDA3F525B1D74500FCFDD3 /* SelectBibleReadingViewController.swift */; };
-		C1DDA3FB25B1D74500FCFDD3 /* SelectBibleReadingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDA3F625B1D74500FCFDD3 /* SelectBibleReadingBuilder.swift */; };
-		C1DDA3FC25B1D74500FCFDD3 /* SelectBibleReadingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDA3F725B1D74500FCFDD3 /* SelectBibleReadingInteractor.swift */; };
-		C1DDA40725B295A400FCFDD3 /* BibleReadingSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDA40625B295A400FCFDD3 /* BibleReadingSchedule.swift */; };
+		C1DDA3F825B1D74500FCFDD3 /* SelectPlanRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDA3F325B1D74500FCFDD3 /* SelectPlanRouter.swift */; };
+		C1DDA3F925B1D74500FCFDD3 /* SelectPlanViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DDA3F425B1D74500FCFDD3 /* SelectPlanViewController.storyboard */; };
+		C1DDA3FA25B1D74500FCFDD3 /* SelectPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDA3F525B1D74500FCFDD3 /* SelectPlanViewController.swift */; };
+		C1DDA3FB25B1D74500FCFDD3 /* SelectPlanBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDA3F625B1D74500FCFDD3 /* SelectPlanBuilder.swift */; };
+		C1DDA3FC25B1D74500FCFDD3 /* SelectPlanInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDA3F725B1D74500FCFDD3 /* SelectPlanInteractor.swift */; };
+		C1DDA40725B295A400FCFDD3 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDA40625B295A400FCFDD3 /* Schedule.swift */; };
 		C1E775F525CD705700C2FCB9 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = C1E775F425CD705700C2FCB9 /* RxKeyboard */; };
 		C1E775FC25CE3CA100C2FCB9 /* PrayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E775FA25CE3CA100C2FCB9 /* PrayerCell.swift */; };
 		C1E775FD25CE3CA100C2FCB9 /* PrayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E775FB25CE3CA100C2FCB9 /* PrayerCell.xib */; };
-		C1E7CB0425B5961200E14AB7 /* BibleReadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E7CB0225B5961200E14AB7 /* BibleReadingCell.swift */; };
+		C1E7CB0425B5961200E14AB7 /* PlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E7CB0225B5961200E14AB7 /* PlanCell.swift */; };
 		C1E7CB0525B5961200E14AB7 /* BibleReadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E7CB0325B5961200E14AB7 /* BibleReadingCell.xib */; };
 		C1FB96AB25BFAC4F00D470A9 /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = C1FB96AA25BFAC4F00D470A9 /* PanModal */; };
 		C1FB96B525BFACAE00D470A9 /* BibleFontRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FB96B025BFACAE00D470A9 /* BibleFontRouter.swift */; };
@@ -145,14 +145,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B330933262539680063BD46 /* BibleReadingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleReadingRouter.swift; sourceTree = "<group>"; };
-		0B330935262539680063BD46 /* BibleReadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleReadingViewController.swift; sourceTree = "<group>"; };
-		0B330936262539680063BD46 /* BibleReadingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleReadingBuilder.swift; sourceTree = "<group>"; };
-		0B330937262539680063BD46 /* BibleReadingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleReadingInteractor.swift; sourceTree = "<group>"; };
+		0B330933262539680063BD46 /* PlanRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRouter.swift; sourceTree = "<group>"; };
+		0B330935262539680063BD46 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		0B330936262539680063BD46 /* PlanBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanBuilder.swift; sourceTree = "<group>"; };
+		0B330937262539680063BD46 /* PlanInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanInteractor.swift; sourceTree = "<group>"; };
 		0BB3DCED26948F260099F773 /* FindingReadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindingReadCell.swift; sourceTree = "<group>"; };
 		0BB3DCEF26948F360099F773 /* InProgressReadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InProgressReadingCell.swift; sourceTree = "<group>"; };
 		0BB3DCF12694A3C90099F773 /* MyPlanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlanCell.swift; sourceTree = "<group>"; };
-		0BB3DCF32694C3970099F773 /* BibleReading+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BibleReading+UI.swift"; sourceTree = "<group>"; };
+		0BB3DCF32694C3970099F773 /* Plan+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plan+UI.swift"; sourceTree = "<group>"; };
 		C101638E25B0950F0079EB69 /* SelectingVerseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingVerseRouter.swift; sourceTree = "<group>"; };
 		C101638F25B0950F0079EB69 /* SelectingVerseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingVerseViewController.swift; sourceTree = "<group>"; };
 		C101639025B0950F0079EB69 /* SelectingVerseBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingVerseBuilder.swift; sourceTree = "<group>"; };
@@ -239,15 +239,15 @@
 		C1D02CB925AE961F0001CF6C /* BiblePresentableState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiblePresentableState.swift; sourceTree = "<group>"; };
 		C1D02CC725AE97AF0001CF6C /* BibleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleManager.swift; sourceTree = "<group>"; };
 		C1D02CCF25AEC1770001CF6C /* BibleChapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleChapter.swift; sourceTree = "<group>"; };
-		C1DDA3F325B1D74500FCFDD3 /* SelectBibleReadingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBibleReadingRouter.swift; sourceTree = "<group>"; };
-		C1DDA3F425B1D74500FCFDD3 /* SelectBibleReadingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectBibleReadingViewController.storyboard; sourceTree = "<group>"; };
-		C1DDA3F525B1D74500FCFDD3 /* SelectBibleReadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBibleReadingViewController.swift; sourceTree = "<group>"; };
-		C1DDA3F625B1D74500FCFDD3 /* SelectBibleReadingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBibleReadingBuilder.swift; sourceTree = "<group>"; };
-		C1DDA3F725B1D74500FCFDD3 /* SelectBibleReadingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBibleReadingInteractor.swift; sourceTree = "<group>"; };
-		C1DDA40625B295A400FCFDD3 /* BibleReadingSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleReadingSchedule.swift; sourceTree = "<group>"; };
+		C1DDA3F325B1D74500FCFDD3 /* SelectPlanRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlanRouter.swift; sourceTree = "<group>"; };
+		C1DDA3F425B1D74500FCFDD3 /* SelectPlanViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectPlanViewController.storyboard; sourceTree = "<group>"; };
+		C1DDA3F525B1D74500FCFDD3 /* SelectPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlanViewController.swift; sourceTree = "<group>"; };
+		C1DDA3F625B1D74500FCFDD3 /* SelectPlanBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlanBuilder.swift; sourceTree = "<group>"; };
+		C1DDA3F725B1D74500FCFDD3 /* SelectPlanInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlanInteractor.swift; sourceTree = "<group>"; };
+		C1DDA40625B295A400FCFDD3 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		C1E775FA25CE3CA100C2FCB9 /* PrayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerCell.swift; sourceTree = "<group>"; };
 		C1E775FB25CE3CA100C2FCB9 /* PrayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerCell.xib; sourceTree = "<group>"; };
-		C1E7CB0225B5961200E14AB7 /* BibleReadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleReadingCell.swift; sourceTree = "<group>"; };
+		C1E7CB0225B5961200E14AB7 /* PlanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanCell.swift; sourceTree = "<group>"; };
 		C1E7CB0325B5961200E14AB7 /* BibleReadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BibleReadingCell.xib; sourceTree = "<group>"; };
 		C1FB96B025BFACAE00D470A9 /* BibleFontRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleFontRouter.swift; sourceTree = "<group>"; };
 		C1FB96B125BFACAE00D470A9 /* BibleFontViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BibleFontViewController.storyboard; sourceTree = "<group>"; };
@@ -296,17 +296,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B330932262537EB0063BD46 /* BibleReading */ = {
+		0B330932262537EB0063BD46 /* Plan */ = {
 			isa = PBXGroup;
 			children = (
 				0BB3DCE826948E680099F773 /* Components */,
-				0B330933262539680063BD46 /* BibleReadingRouter.swift */,
-				0B330936262539680063BD46 /* BibleReadingBuilder.swift */,
-				0B330937262539680063BD46 /* BibleReadingInteractor.swift */,
-				0B330935262539680063BD46 /* BibleReadingViewController.swift */,
-				0BB3DCF32694C3970099F773 /* BibleReading+UI.swift */,
+				0B330933262539680063BD46 /* PlanRouter.swift */,
+				0B330936262539680063BD46 /* PlanBuilder.swift */,
+				0B330937262539680063BD46 /* PlanInteractor.swift */,
+				0B330935262539680063BD46 /* PlanViewController.swift */,
+				0BB3DCF32694C3970099F773 /* Plan+UI.swift */,
 			);
-			path = BibleReading;
+			path = Plan;
 			sourceTree = "<group>";
 		};
 		0BB3DCE826948E680099F773 /* Components */ = {
@@ -561,9 +561,9 @@
 				C16BD21E25C516F700C8139F /* NewPrayer */,
 				C1D02CA925AE88430001CF6C /* Select */,
 				C101638D25B094E20079EB69 /* SelectingVerse */,
-				0B330932262537EB0063BD46 /* BibleReading */,
+				0B330932262537EB0063BD46 /* Plan */,
 				C12B915E25B0339700DD6FB1 /* Setting */,
-				C1DDA3F225B1D70C00FCFDD3 /* SelectBibleReading */,
+				C1DDA3F225B1D70C00FCFDD3 /* SelectPlan */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -637,7 +637,7 @@
 			isa = PBXGroup;
 			children = (
 				C1D02CCF25AEC1770001CF6C /* BibleChapter.swift */,
-				C1DDA40625B295A400FCFDD3 /* BibleReadingSchedule.swift */,
+				C1DDA40625B295A400FCFDD3 /* Schedule.swift */,
 				C16BD1E425C4808600C8139F /* VIP.swift */,
 				C16BD20525C49DAE00C8139F /* Prayer.swift */,
 			);
@@ -663,17 +663,17 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
-		C1DDA3F225B1D70C00FCFDD3 /* SelectBibleReading */ = {
+		C1DDA3F225B1D70C00FCFDD3 /* SelectPlan */ = {
 			isa = PBXGroup;
 			children = (
 				C1E7CB0125B595FA00E14AB7 /* Components */,
-				C1DDA3F325B1D74500FCFDD3 /* SelectBibleReadingRouter.swift */,
-				C1DDA3F625B1D74500FCFDD3 /* SelectBibleReadingBuilder.swift */,
-				C1DDA3F725B1D74500FCFDD3 /* SelectBibleReadingInteractor.swift */,
-				C1DDA3F525B1D74500FCFDD3 /* SelectBibleReadingViewController.swift */,
-				C1DDA3F425B1D74500FCFDD3 /* SelectBibleReadingViewController.storyboard */,
+				C1DDA3F325B1D74500FCFDD3 /* SelectPlanRouter.swift */,
+				C1DDA3F625B1D74500FCFDD3 /* SelectPlanBuilder.swift */,
+				C1DDA3F725B1D74500FCFDD3 /* SelectPlanInteractor.swift */,
+				C1DDA3F525B1D74500FCFDD3 /* SelectPlanViewController.swift */,
+				C1DDA3F425B1D74500FCFDD3 /* SelectPlanViewController.storyboard */,
 			);
-			path = SelectBibleReading;
+			path = SelectPlan;
 			sourceTree = "<group>";
 		};
 		C1E775F925CE3C7700C2FCB9 /* Components */ = {
@@ -689,7 +689,7 @@
 		C1E7CB0125B595FA00E14AB7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C1E7CB0225B5961200E14AB7 /* BibleReadingCell.swift */,
+				C1E7CB0225B5961200E14AB7 /* PlanCell.swift */,
 				C1E7CB0325B5961200E14AB7 /* BibleReadingCell.xib */,
 			);
 			path = Components;
@@ -846,7 +846,7 @@
 				C16BD1F825C486CC00C8139F /* VIPDetailViewController.storyboard in Resources */,
 				C168CF0225AC85CC008C1AFE /* LaunchScreen.storyboard in Resources */,
 				C16BD22525C5170D00C8139F /* NewPrayerViewController.storyboard in Resources */,
-				C1DDA3F925B1D74500FCFDD3 /* SelectBibleReadingViewController.storyboard in Resources */,
+				C1DDA3F925B1D74500FCFDD3 /* SelectPlanViewController.storyboard in Resources */,
 				C1E7CB0525B5961200E14AB7 /* BibleReadingCell.xib in Resources */,
 				C12B917325B03DE400DD6FB1 /* BibleVerseCell.xib in Resources */,
 				C1E775FD25CE3CA100C2FCB9 /* PrayerCell.xib in Resources */,
@@ -911,7 +911,7 @@
 				C101639425B0950F0079EB69 /* SelectingVerseViewController.swift in Sources */,
 				C16BD1F925C486CC00C8139F /* VIPDetailViewController.swift in Sources */,
 				C1D02C8825AE74BF0001CF6C /* UIViewController + Ex.swift in Sources */,
-				C1DDA3FC25B1D74500FCFDD3 /* SelectBibleReadingInteractor.swift in Sources */,
+				C1DDA3FC25B1D74500FCFDD3 /* SelectPlanInteractor.swift in Sources */,
 				C1103ABF25BE60AA002AEABA /* SchedulesManager.swift in Sources */,
 				C12069C025C2E9D800C8A7B7 /* PrayerViewController.swift in Sources */,
 				C1FB96B525BFACAE00D470A9 /* BibleFontRouter.swift in Sources */,
@@ -929,9 +929,9 @@
 				C1D02C1B25AC8DAA0001CF6C /* MainTabBarViewController.swift in Sources */,
 				C16BD1BC25C4674B00C8139F /* NewVIPRouter.swift in Sources */,
 				C1FB96B825BFACAF00D470A9 /* BibleFontBuilder.swift in Sources */,
-				0B33093A262539690063BD46 /* BibleReadingViewController.swift in Sources */,
-				C1DDA3F825B1D74500FCFDD3 /* SelectBibleReadingRouter.swift in Sources */,
-				0B33093C262539690063BD46 /* BibleReadingInteractor.swift in Sources */,
+				0B33093A262539690063BD46 /* PlanViewController.swift in Sources */,
+				C1DDA3F825B1D74500FCFDD3 /* SelectPlanRouter.swift in Sources */,
+				0B33093C262539690063BD46 /* PlanInteractor.swift in Sources */,
 				C12069C125C2E9D800C8A7B7 /* PrayerBuilder.swift in Sources */,
 				C12B916725B0340800DD6FB1 /* SettingBuilder.swift in Sources */,
 				C16BD20625C49DAE00C8139F /* Prayer.swift in Sources */,
@@ -941,22 +941,22 @@
 				C16BD22625C5170D00C8139F /* NewPrayerViewController.swift in Sources */,
 				C16BD1BF25C4674B00C8139F /* NewVIPBuilder.swift in Sources */,
 				C1D02CD025AEC1770001CF6C /* BibleChapter.swift in Sources */,
-				C1E7CB0425B5961200E14AB7 /* BibleReadingCell.swift in Sources */,
-				C1DDA3FA25B1D74500FCFDD3 /* SelectBibleReadingViewController.swift in Sources */,
+				C1E7CB0425B5961200E14AB7 /* PlanCell.swift in Sources */,
+				C1DDA3FA25B1D74500FCFDD3 /* SelectPlanViewController.swift in Sources */,
 				C1FB96B725BFACAF00D470A9 /* BibleFontViewController.swift in Sources */,
 				C1D02C2E25AC939A0001CF6C /* BibleInteractor.swift in Sources */,
-				0B330938262539690063BD46 /* BibleReadingRouter.swift in Sources */,
+				0B330938262539690063BD46 /* PlanRouter.swift in Sources */,
 				C1D02C1C25AC8DAA0001CF6C /* MainTabBarBuilder.swift in Sources */,
 				C1D02C1A25AC8DAA0001CF6C /* MainTabBarRouter.swift in Sources */,
 				C1D02CBA25AE961F0001CF6C /* BiblePresentableState.swift in Sources */,
-				C1DDA40725B295A400FCFDD3 /* BibleReadingSchedule.swift in Sources */,
+				C1DDA40725B295A400FCFDD3 /* Schedule.swift in Sources */,
 				C15DF10025E40DE700D447FC /* PrayerOptionView.swift in Sources */,
 				C168CEF625AC85C9008C1AFE /* AppDelegate.swift in Sources */,
-				0BB3DCF42694C3970099F773 /* BibleReading+UI.swift in Sources */,
+				0BB3DCF42694C3970099F773 /* Plan+UI.swift in Sources */,
 				C12B917225B03DE400DD6FB1 /* BibleVerseCell.swift in Sources */,
 				C168CEF825AC85C9008C1AFE /* SceneDelegate.swift in Sources */,
-				0B33093B262539690063BD46 /* BibleReadingBuilder.swift in Sources */,
-				C1DDA3FB25B1D74500FCFDD3 /* SelectBibleReadingBuilder.swift in Sources */,
+				0B33093B262539690063BD46 /* PlanBuilder.swift in Sources */,
+				C1DDA3FB25B1D74500FCFDD3 /* SelectPlanBuilder.swift in Sources */,
 				C168CF4B25AC8834008C1AFE /* RootBuilder.swift in Sources */,
 				C1D02C2C25AC939A0001CF6C /* BibleViewController.swift in Sources */,
 				C1D02CB325AE89A40001CF6C /* SelectInteractor.swift in Sources */,

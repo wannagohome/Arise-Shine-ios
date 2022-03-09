@@ -1,5 +1,5 @@
 //
-//  BibleReadingViewController.swift
+//  PlanViewController.swift
 //  Arise&Shine
 //
 //  Created by wemeet_pete on 2021/04/13.
@@ -10,18 +10,18 @@ import RxSwift
 import UIKit
 import Then
 
-protocol BibleReadingPresentableListener: AnyObject {
+protocol PlanPresentableListener: AnyObject {
     // TODO: Declare properties and methods that the view controller can invoke to perform
     // business logic, such as signIn(). This protocol is implemented by the corresponding
     // interactor class.
 }
 
-final class BibleReadingViewController:
+final class PlanViewController:
     BaseViewController,
-    BibleReadingPresentable,
-    BibleReadingViewControllable {
+    PlanPresentable,
+    PlanViewControllable {
 
-    weak var listener: BibleReadingPresentableListener?
+    weak var listener: PlanPresentableListener?
     
     let tabBarStackView = UIStackView()
     let inProgressTabButton = UIButton()
@@ -65,21 +65,21 @@ final class BibleReadingViewController:
         tabBarItem = item
     }
     
-    private func bind(listener: BibleReadingPresentableListener?) {
+    private func bind(listener: PlanPresentableListener?) {
         guard let listener = listener else { return }
         
         self.bindActions(to: listener)
         self.bindState(from: listener)
     }
     
-    private func bindActions(to listener: BibleReadingPresentableListener) {
+    private func bindActions(to listener: PlanPresentableListener) {
         self.subscribeTabbarActions()
     }
     
-    private func bindState(from listener: BibleReadingPresentableListener) {}
+    private func bindState(from listener: PlanPresentableListener) {}
 }
 
-extension BibleReadingViewController: UICollectionViewDataSource {
+extension PlanViewController: UICollectionViewDataSource {
     func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
@@ -97,7 +97,7 @@ extension BibleReadingViewController: UICollectionViewDataSource {
     }
 }
 
-extension BibleReadingViewController: UICollectionViewDelegateFlowLayout {
+extension PlanViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(
         _ collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
@@ -107,7 +107,7 @@ extension BibleReadingViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-private extension BibleReadingViewController {
+private extension PlanViewController {
     func subscribeTabbarActions() {
         self.inProgressTabButton.rx.tap
             .subscribe(onNext: { [weak self] _ in

@@ -13,7 +13,7 @@ protocol SettingDependency: Dependency {
 
 final class SettingComponent:
     Component<SettingDependency>,
-    SelectBibleReadingDependency {
+    SelectPlanDependency {
     
     fileprivate var initialState: SettingPresentableState { .init() }
     
@@ -42,9 +42,9 @@ final class SettingBuilder:
                                            initialState: component.initialState)
         interactor.listener = listener
         
-        let selectBibleReadingBuilder = SelectBibleReadingBuilder(dependency: component)
+        let selectPlanBuilder = SelectPlanBuilder(dependency: component)
         return SettingRouter(interactor: interactor,
                              viewController: component.settingViewController,
-                             selectBibleReadingBuilder: selectBibleReadingBuilder)
+                             selectPlanBuilder: selectPlanBuilder)
     }
 }
