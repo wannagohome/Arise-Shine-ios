@@ -90,7 +90,6 @@
 		C16BD22825C5170D00C8139F /* NewPrayerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BD22325C5170D00C8139F /* NewPrayerInteractor.swift */; };
 		C1A3331F25E0360B007D0807 /* UILabel + Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A3331E25E0360B007D0807 /* UILabel + Ex.swift */; };
 		C1BE039925C07F4600D028E7 /* UserDefaults + Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BE039825C07F4600D028E7 /* UserDefaults + Ex.swift */; };
-		C1BE03A825C0976800D028E7 /* Toaster in Frameworks */ = {isa = PBXBuildFile; productRef = C1BE03A725C0976800D028E7 /* Toaster */; };
 		C1D02C1125AC89E20001CF6C /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02C1025AC89E20001CF6C /* AppComponent.swift */; };
 		C1D02C1A25AC8DAA0001CF6C /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02C1625AC8DAA0001CF6C /* MainTabBarRouter.swift */; };
 		C1D02C1B25AC8DAA0001CF6C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02C1725AC8DAA0001CF6C /* MainTabBarViewController.swift */; };
@@ -133,6 +132,7 @@
 		C1FB96B725BFACAF00D470A9 /* BibleFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FB96B225BFACAE00D470A9 /* BibleFontViewController.swift */; };
 		C1FB96B825BFACAF00D470A9 /* BibleFontBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FB96B325BFACAE00D470A9 /* BibleFontBuilder.swift */; };
 		C1FB96B925BFACAF00D470A9 /* BibleFontInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FB96B425BFACAE00D470A9 /* BibleFontInteractor.swift */; };
+		CD07691B27EB439E005DCA48 /* Toaster in Frameworks */ = {isa = PBXBuildFile; productRef = CD07691A27EB439E005DCA48 /* Toaster */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -277,10 +277,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD07691B27EB439E005DCA48 /* Toaster in Frameworks */,
 				C1D02C3A25AC99ED0001CF6C /* SQLite in Frameworks */,
 				C12069E425C32F6A00C8A7B7 /* RxDataSources in Frameworks */,
 				C12B917925B04A1300DD6FB1 /* Then in Frameworks */,
-				C1BE03A825C0976800D028E7 /* Toaster in Frameworks */,
 				C1E775F525CD705700C2FCB9 /* RxKeyboard in Frameworks */,
 				C1682BD825AFE4EC00E8564A /* SnapKit in Frameworks */,
 				C12069E225C32F6A00C8A7B7 /* Differentiator in Frameworks */,
@@ -774,11 +774,11 @@
 				C1682BD725AFE4EC00E8564A /* SnapKit */,
 				C12B917825B04A1300DD6FB1 /* Then */,
 				C1FB96AA25BFAC4F00D470A9 /* PanModal */,
-				C1BE03A725C0976800D028E7 /* Toaster */,
 				C12069E125C32F6A00C8A7B7 /* Differentiator */,
 				C12069E325C32F6A00C8A7B7 /* RxDataSources */,
 				C11FF95B25CC574100E347D7 /* RxGesture */,
 				C1E775F425CD705700C2FCB9 /* RxKeyboard */,
+				CD07691A27EB439E005DCA48 /* Toaster */,
 			);
 			productName = "Arise&Shine";
 			productReference = C168CEF225AC85C9008C1AFE /* Arise&Shine.app */;
@@ -861,10 +861,10 @@
 				C1682BD625AFE4EC00E8564A /* XCRemoteSwiftPackageReference "SnapKit" */,
 				C12B917725B04A1300DD6FB1 /* XCRemoteSwiftPackageReference "Then" */,
 				C1FB96A925BFAC4F00D470A9 /* XCRemoteSwiftPackageReference "PanModal" */,
-				C1BE03A625C0976800D028E7 /* XCRemoteSwiftPackageReference "Toaster" */,
 				C12069E025C32F6900C8A7B7 /* XCRemoteSwiftPackageReference "RxDataSources" */,
 				C11FF95A25CC574100E347D7 /* XCRemoteSwiftPackageReference "RxGesture" */,
 				C1E775F325CD705700C2FCB9 /* XCRemoteSwiftPackageReference "RxKeyboard" */,
+				CD07691927EB439E005DCA48 /* XCRemoteSwiftPackageReference "Toaster" */,
 			);
 			productRefGroup = C168CEF325AC85C9008C1AFE /* Products */;
 			projectDirPath = "";
@@ -1417,14 +1417,6 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		C1BE03A625C0976800D028E7 /* XCRemoteSwiftPackageReference "Toaster" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/wannagohome/Toaster";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.3.1;
-			};
-		};
 		C1D02C3825AC99ED0001CF6C /* XCRemoteSwiftPackageReference "SQLite" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
@@ -1455,6 +1447,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.2.7;
+			};
+		};
+		CD07691927EB439E005DCA48 /* XCRemoteSwiftPackageReference "Toaster" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Toaster.git";
+			requirement = {
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1510,11 +1510,6 @@
 			package = C168CF3625AC8745008C1AFE /* XCRemoteSwiftPackageReference "ReactorKit" */;
 			productName = ReactorKit;
 		};
-		C1BE03A725C0976800D028E7 /* Toaster */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C1BE03A625C0976800D028E7 /* XCRemoteSwiftPackageReference "Toaster" */;
-			productName = Toaster;
-		};
 		C1D02C3925AC99ED0001CF6C /* SQLite */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C1D02C3825AC99ED0001CF6C /* XCRemoteSwiftPackageReference "SQLite" */;
@@ -1534,6 +1529,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C1FB96A925BFAC4F00D470A9 /* XCRemoteSwiftPackageReference "PanModal" */;
 			productName = PanModal;
+		};
+		CD07691A27EB439E005DCA48 /* Toaster */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD07691927EB439E005DCA48 /* XCRemoteSwiftPackageReference "Toaster" */;
+			productName = Toaster;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
